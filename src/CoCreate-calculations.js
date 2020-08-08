@@ -16,10 +16,10 @@ var CoCreateCalculation = {
     }
     
     for (let i=0; i<calculationElements.length; i++) {
-    	if (CoCreateUtils.getInitialized(calculationElements[i])) {
+    	if (CoCreateInit.getInitialized(calculationElements[i])) {
   			return;
   		}
-  		CoCreateUtils.setInitialized(calculationElements[i])
+  		CoCreateInit.setInitialized(calculationElements[i])
   		
       this.initCalculationElement(calculationElements[i]);  
     }
