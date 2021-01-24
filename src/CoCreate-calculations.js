@@ -16,10 +16,10 @@ var CoCreateCalculation = {
     }
     
     for (let i=0; i<calculationElements.length; i++) {
-    	if (CoCreateInit.getInitialized(calculationElements[i])) {
+    	if (CoCreateObserver.getInitialized(calculationElements[i])) {
   			return;
   		}
-  		CoCreateInit.setInitialized(calculationElements[i])
+  		CoCreateObserver.setInitialized(calculationElements[i])
   		
       this.initCalculationElement(calculationElements[i]);  
     }
@@ -159,6 +159,15 @@ function calculation(string) {
 CoCreateCalculation.init();
 
 // CoCreateInit.register_old('[data-calculation]',CoCreateCalculation.initCalculationElement);
-CoCreateInit.register('CoCreateCalculation', CoCreateCalculation, CoCreateCalculation.initCalculationElements);
+// CoCreateInit.register('CoCreateCalculation', CoCreateCalculation, CoCreateCalculation.initCalculationElements);
+
+CoCreateObserver.add({ 
+	name: 'CoCreateCalculationInit', 
+	observe: ['subtree', 'childList'],
+  include: '[data-calculation]',
+	task: function(mutation) {
+		CoCreateCalculation.initCalculationElements(mutation.target)
+	}
+})
 
 export default CoCreateCalculation;
