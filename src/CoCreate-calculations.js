@@ -160,3 +160,5 @@ CoCreateCalculation.init();
 
 // CoCreateInit.register_old('[data-calculation]',CoCreateCalculation.initCalculationElement);
 CoCreateInit.register('CoCreateCalculation', CoCreateCalculation, CoCreateCalculation.initCalculationElements);
+
+export default CoCreateCalculation;
