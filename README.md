@@ -1,5 +1,5 @@
 # CoCreate-calculations
-A simple HTML5 and pure javascript component. Easy configuration using data-attributes and highly styleable.
+A simple calculation component in vanilla javascript. Easy configuration using data-attributes and/or JavaScript API. Great for getting values from multiple elements and calculating to produce a result.
 
 ![GitHub file size in bytes](https://img.shields.io/github/size/CoCreate-app/CoCreate-calculations/dist/CoCreate-calculations.min.js?label=minified%20size&style=for-the-badge) 
 ![GitHub latest release](https://img.shields.io/github/v/release/CoCreate-app/CoCreate-calculations?style=for-the-badge)
