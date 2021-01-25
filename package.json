@@ -1,8 +1,26 @@
 {
   "name": "@cocreate/calculations",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple calculation component in vanilla javascript. Easy configuration using data-attributes and/or JavaScript API. Great for getting values from multiple elements and calculating to produce a result.",
-  "keywords": ["calculation","calculate-values","calculate-total","cocreate","no-code-framework","cocreatejs","cocreatejs-component","cocreate-framework","no-code","low-code","collaborative-framework","realtime","realtime-framework","collaboration","shared-editing","html5-framework","javascript-framework"],
+  "keywords": [
+    "calculation",
+    "calculate-values",
+    "calculate-total",
+    "cocreate",
+    "no-code-framework",
+    "cocreatejs",
+    "cocreatejs-component",
+    "cocreate-framework",
+    "no-code",
+    "low-code",
+    "collaborative-framework",
+    "realtime",
+    "realtime-framework",
+    "collaboration",
+    "shared-editing",
+    "html5-framework",
+    "javascript-framework"
+  ],
   "publishConfig": {
     "access": "public"
   },
