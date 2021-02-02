@@ -23,7 +23,7 @@ module.exports = {
     libraryTarget: 'umd',
     libraryExport: 'default',
     library: 'CoCreateCalculation',
-    library: ['CoCreate', 'calculation'],
+    library: ['CoCreate', 'calculations'],
     globalObject: "this",
   },
 
