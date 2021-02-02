@@ -12,7 +12,7 @@ module.exports = {
 
   // Path to your entry point. From this file Webpack will begin his work
   entry: {
-    'CoCreate-calculations': './src/CoCreate-calculations.js',
+    'CoCreate-calculation': './src/CoCreate-calculation.js',
   },
 
  // Path and filename of your result bundle.
@@ -23,6 +23,7 @@ module.exports = {
     libraryTarget: 'umd',
     libraryExport: 'default',
     library: 'CoCreateCalculation',
+    library: ['CoCreate', 'calculation'],
     globalObject: "this",
   },
 
