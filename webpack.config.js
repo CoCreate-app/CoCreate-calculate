@@ -4,14 +4,14 @@ let isProduction = process.env.NODE_ENV === 'production';
 
 module.exports = {
   entry: {
-    'CoCreate-calculations': './src/CoCreate-calculations.js'
+    'CoCreate-calculation': './src/CoCreate-calculation.js'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: isProduction ? '[name].min.js' : '[name].js',
     libraryTarget: 'umd',
     libraryExport: 'default',
-    library: ['CoCreate', 'calculations'],
+    library: ['CoCreate', 'calculation'],
     globalObject: "this"
   },
   // Default mode for Webpack is production.

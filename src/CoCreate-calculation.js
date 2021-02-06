@@ -17,10 +17,10 @@ var CoCreateCalculation = {
     }
     
     for (let i=0; i<calculationElements.length; i++) {
-    	if (CoCreateObserver.getInitialized(calculationElements[i], "calculation_init")) {
+    	if (CoCreate.observer.getInitialized(calculationElements[i], "calculation_init")) {
   			return;
   		}
-  		CoCreateObserver.setInitialized(calculationElements[i], "calculation_init")
+  		CoCreate.observer.setInitialized(calculationElements[i], "calculation_init")
   		
       this.initCalculationElement(calculationElements[i]);  
     }
@@ -173,22 +173,22 @@ function calculation(string) {
 
 CoCreateCalculation.init();
 
-CoCreateObserver.add({ 
+CoCreate.observer.add({ 
 	name: 'CoCreateCalculationChangeValue', 
 	observe: ['attributes'],
 	attributes: ['value'],
   include: 'input',
-	task: function(mutation) {
+	callback: function(mutation) {
 	  console.log('-----------------------------------------------------')
 		console.log(mutation.target)
 	}
 });
 
-CoCreateObserver.add({ 
+CoCreate.observer.add({ 
 	name: 'CoCreateCalculationInit', 
 	observe: ['subtree', 'childList'],
   include: '[data-calculation]',
-	task: function(mutation) {
+	callback: function(mutation) {
 		CoCreateCalculation.initCalculationElements(mutation.target)
 	}
 });
