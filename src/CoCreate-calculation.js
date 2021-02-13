@@ -173,7 +173,7 @@ function calculation(string) {
 
 CoCreateCalculation.init();
 
-CoCreate.observer.add({ 
+CoCreate.observer.init({ 
 	name: 'CoCreateCalculationChangeValue', 
 	observe: ['attributes'],
 	attributes: ['value'],
@@ -184,7 +184,7 @@ CoCreate.observer.add({
 	}
 });
 
-CoCreate.observer.add({ 
+CoCreate.observer.init({ 
 	name: 'CoCreateCalculationInit', 
 	observe: ['subtree', 'childList'],
   include: '[data-calculation]',
