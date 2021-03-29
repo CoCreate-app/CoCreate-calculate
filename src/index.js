@@ -1,3 +1,10 @@
+import CoCreateObserver from '@cocreate/observer'
+import ccutils from '@cocreate/utils';
+import crdt from '@cocreate/crdt'
+import CoCreateInput from '@cocreate/input'
+import floatingLabel from '@cocreate/floating-label'
+import htmltags from '@cocreate/htmltags'
+
 var CoCreateCalculation = {
   init: function() {
     this.initCalculationElements();
@@ -17,10 +24,10 @@ var CoCreateCalculation = {
     }
     
     for (let i=0; i<calculationElements.length; i++) {
-    	if (CoCreate.observer.getInitialized(calculationElements[i], "calculation_init")) {
+    	if (CoCreateObserver.getInitialized(calculationElements[i], "calculation_init")) {
   			return;
   		}
-  		CoCreate.observer.setInitialized(calculationElements[i], "calculation_init")
+  		CoCreateObserver.setInitialized(calculationElements[i], "calculation_init")
   		
       this.initCalculationElement(calculationElements[i]);  
     }
@@ -31,25 +38,87 @@ var CoCreateCalculation = {
     
       const self = this;
       let data_calculation = ele.getAttribute('data-calculation');
-      let ids = this.getIds(data_calculation); 
-      
+      let ids = this.getIds(data_calculation);
+
+      let selectors = [];
       for (let i = 0; i < ids.length; i++) {
         let id = ids[i];
         
-        let input = document.getElementById(id);
+        let input = null;
+        try {
+          input = document.querySelector(id);
+        } catch (error) { input = null; }
+        
         if (input) {
           input.addEventListener('input', function() {
             self.setCalcationResult(ele);
           })
           
           input.addEventListener('CoCreateInput-setvalue', function() {
-            console.log('&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&')
-              self.setCalcationResult(ele)
+              // self.setCalcationResult(ele)
           })
           
+          if (input.hasAttribute('data-calculation')) {
+            input.addEventListener('changedCalcValue', function(e) {
+              self.setCalcationResult(ele)
+            })
+          }
+          
+        } else {
+          //. add event of special operator
+          
+          let selector = this.__getOperatorSelector(id);
+          if (selector) {
+            selectors.push(selector)
+          }
         }
       }
       
+      if (selectors.length > 0) {
+        document.addEventListener('changedCalcValue', function(e) {
+
+          let isMatched = false;
+          selectors.forEach(selector => {
+            if (e.target.matches(selector)) {
+              isMatched = true; return;
+            }
+          })
+
+          if (isMatched) {
+            self.setCalcationResult(ele);
+          }
+        })
+      }
+  },
+  
+  __getOperatorSelector(value) {
+    let result = /SUM\(\s*([\w\W]+)\s*\)/g.exec(value);
+    if (result && result[1]) {
+      return result[1].trim();
+    }
+    return null;
+  },
+  
+  calculationSpecialOperator(value) {
+    let self = this;
+    let sum = null;
+    let result = /SUM\(\s*([\w\W]+)\s*\)/g.exec(value);
+    if (result) {
+      let selector = result[1].trim()
+      
+      if (value.trim().indexOf('SUM') == 0) {
+        let elements = document.querySelectorAll(selector)
+        sum = 0;
+        elements.forEach(el => {
+          let tmpValue = self.__getElementValue(el);
+          tmpValue = Number(tmpValue);
+          if (!Number.isNaN(tmpValue)) {
+            sum += tmpValue;
+          }
+        })
+      }
+    } 
+    return sum
   },
   
     
@@ -58,35 +127,69 @@ var CoCreateCalculation = {
     
     let calString = this.replaceIdWithValue(data_calculation);
     
-    console.log(calString);
     if (calString) {
       let result = calculation(calString);
       if (ele.tagName == 'INPUT' || ele.tagName == 'TEXTAREA' || ele.tagName == 'SELECT') {
         ele.value = result
-        // if (window.CoCreateInput) {
-        //   window.CoCreateInput.save(ele)
-        // }
+        
+        if (ccutils.isUsageY(ele)) {
+          ele.value = "";
+          crdt.replaceText({
+            collection: ele.getAttribute('data-collection'),
+            document_id: ele.getAttribute('data-document_id'),
+            name: ele.getAttribute('name'),
+            value: result.toString()
+          })
+        } else {
+          CoCreateInput.save(ele);
+        }
+        
+        if (floatingLabel)   {
+          floatingLabel.update(ele, ele.value)
+        }
       } else {
         ele.innerHTML = result;
-        // if (window.CoCreateHtmlTags) {
-        //   window.CoCreateHtmlTags.save(ele);
-        // }
+        htmltags.saveContent(ele);
       }
+      
+      //. set custom event
+      var event = new CustomEvent('changedCalcValue', {
+        bubbles: true,
+      })
+      ele.dispatchEvent(event);
     }
     
+  },
+  
+  __getElementValue: function(element) {
+    if (element.tagName == 'INPUT' || element.tagName == 'TEXTAREA' || element.tagName == 'SELECT') {
+      return element.value;
+    } else {
+      return element.innerHTML;
+    }
   },
     
   replaceIdWithValue: function(data_calculation) {
     let ids = this.getIds(data_calculation);
-    
+
     for (let i=0; i < ids.length; i++) {
       let id = ids[i];
       
-      let input = document.getElementById(id);
-      if (input) {
-        let value = Number(input.value);
+      let input = null;
       
-        data_calculation = data_calculation.replace(new RegExp('{' + id + '}', 'g'), value);   
+      try {
+        input = document.querySelector(id);
+      } catch (error) { input = null; }
+      
+      let value = null;
+      if (input) {
+        value = Number(this.__getElementValue(input));
+      } else {
+        value = this.calculationSpecialOperator(id);
+      }
+      
+      if (value != null && !Number.isNaN(value)) {
+        data_calculation = data_calculation.replaceAll('{' + id + '}', value);
       }
     }
     
@@ -173,7 +276,7 @@ function calculation(string) {
 
 CoCreateCalculation.init();
 
-CoCreate.observer.init({ 
+CoCreateObserver.init({ 
 	name: 'CoCreateCalculationChangeValue', 
 	observe: ['attributes'],
 	attributes: ['value'],
@@ -184,7 +287,7 @@ CoCreate.observer.init({
 	}
 });
 
-CoCreate.observer.init({ 
+CoCreateObserver.init({ 
 	name: 'CoCreateCalculationInit', 
 	observe: ['subtree', 'childList'],
   include: '[data-calculation]',
