@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.0.1...v1.0.2) (2021-03-29)
+
+
+### Bug Fixes
+
+* Package Paths ([71b3903](https://github.com/CoCreate-app/CoCreate-calculations/commit/71b3903772f2c1a6960a760dd12dc9170d055837))
+
 ## [1.0.1](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.0.0...v1.0.1) (2021-01-25)
 
 
