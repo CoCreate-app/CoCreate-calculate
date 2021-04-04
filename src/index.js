@@ -1,6 +1,6 @@
 import CoCreateObserver from '@cocreate/observer'
-import ccutils from '@cocreate/utils';
 import crdt from '@cocreate/crdt'
+import crud from '@cocreate/crud-client'
 import CoCreateInput from '@cocreate/input'
 import floatingLabel from '@cocreate/floating-label'
 import htmltags from '@cocreate/htmltags'
@@ -132,7 +132,7 @@ var CoCreateCalculation = {
       if (ele.tagName == 'INPUT' || ele.tagName == 'TEXTAREA' || ele.tagName == 'SELECT') {
         ele.value = result
         
-        if (ccutils.isUsageY(ele)) {
+        if (crud.isCRDT(ele)) {
           ele.value = "";
           crdt.replaceText({
             collection: ele.getAttribute('data-collection'),
