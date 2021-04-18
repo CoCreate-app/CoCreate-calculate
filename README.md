@@ -9,7 +9,7 @@ A simple calculation component in vanilla javascript. Easily configured using HT
 
 ![CoCreate-calculation](https://cdn.cocreate.app/docs/CoCreate-calculation.gif)
 
-## [Docs & Demo](https://cocreate.app/docs/clone)
+## [Docs & Demo](https://cocreate.app/docs/calculation)
 
 For a complete guide and working demo refer to the [doumentation](https://cocreate.app/docs/calculation)
 
