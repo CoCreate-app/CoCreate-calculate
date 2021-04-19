@@ -1,3 +1,18 @@
+## [1.0.6](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.0.5...v1.0.6) (2021-04-19)
+
+
+### Bug Fixes
+
+* add missing packages ([5f87e2e](https://github.com/CoCreate-app/CoCreate-calculations/commit/5f87e2ec1d0d2a362346ffddaf315782e2ad022a))
+
+## [1.0.5](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.0.4...v1.0.5) (2021-04-19)
+
+
+### Bug Fixes
+
+* ci and build process ([e45f068](https://github.com/CoCreate-app/CoCreate-calculations/commit/e45f068970474a19909544f920d2bf5599df8880))
+* npm publish and cdn deployment ([e761540](https://github.com/CoCreate-app/CoCreate-calculations/commit/e761540f799f8287e921423eac4f3d30e6212302))
+
 ## [1.0.4](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.0.3...v1.0.4) (2021-04-14)
 
 
