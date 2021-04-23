@@ -149,7 +149,8 @@ var CoCreateCalculation = {
         }
       } else {
         ele.innerHTML = result;
-        htmltags.saveContent(ele);
+        // htmltags.saveContent(ele);
+        htmltags.save(ele)
       }
       
       //. set custom event
