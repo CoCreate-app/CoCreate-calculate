@@ -20,45 +20,52 @@
                 <div class="display:flex align-items:center">
                     <h2>CoCreate-calculations</h2>
                 </div>
-                <div class="display:flex align-items:center font-size:20px social_share" data-height="600" data-width="500" data-media="https://via.placeholder.com/300/09f/fff.png">
+                <div class="display:flex align-items:center font-size:20px" data-share_height="600" data-share_width="500" data-share_media="https://via.placeholder.com/300/09f/fff.png">
                     <a href="https://github.com/CoCreate-app/CoCreate-calculations" target="_blank" class="margin-right:15px"><i class="fab fa-github"></i></a>
-                    <a class="margin-right:15px share" data-network='twitter' title="Share on twitter"><i class="fab fa-twitter"></i></a>
-                    <a class="margin-right:15px share" data-network='facebook' title="Share on Facebook"><i class="fab fa-facebook"></i></a>
-                    <a class="margin-right:15px share" data-network='instagram' title="Share on instagram"><i class="fab fa-instagram"></i></a>
-                    <a class="margin-right:15px share" data-network='share' title="Share on share"><i class="fas fa-share-alt"></i></a>
+                    <a class="margin-right:15px" data-share_network='twitter' title="Share on twitter"><i class="fab fa-twitter"></i></a>
+                    <a class="margin-right:15px" data-share_network='facebook' title="Share on Facebook"><i class="fab fa-facebook"></i></a>
+                    <a class="margin-right:15px" data-share_network='instagram' title="Share on instagram"><i class="fab fa-instagram"></i></a>
+                    <a class="margin-right:15px" data-share_network='share' title="Share on share"><i class="fas fa-share-alt"></i></a>
                 </div>
             </div>
             <p class="max-width:500px margin:20px_0px">general description: A handy vanilla JavaScript calculator, concatenate multiple elements containing integers & execute calculations. Can be used for creating  invoices,making payments & any kind of complex calculation. Easily configured using HTML5 data-attributes and/or JavaScript API.</p>
             <div id="calculations-section" class="display:flex flex-wrap:wrap">
                 <div class="flex-grow:1 width:300px padding:0px_10px margin:20px_0px">
     
-                <div>
-                   <h2 id="calculation-installation" data-hover="display:block" data-target="" class="border-bottom:1px_solid_lightgrey padding:5px_0px">Install</h2>
-                   <a class="display:none" href="#calculation-installation"><i class="fas fa-link"></i></a>
-                </div>
-                <pre><code class="language-javascript">npm install @cocreate/calculation</code></pre>
-                <p class="padding:10px_0px">Or you can use cdn link:</p>
-                <pre><code class="language-javascript">https://cdn.cocreate.app/latest/cocreate.min.js</code></pre>
+                    <div id="calculation-install" class="border-bottom:1px_solid_lightgrey">
+                        <span class="display:flex align-items:center" data-hover="display:block!important" data-hover_target='[href="#calculation-install"]'>
+                            <h2 class="padding:5px_0px">Install</h2>
+                            <a class="margin-left:10px display:none" href="#calculation-install"><i class="fas fa-link"></i></a>
+                        </span>
+                    </div>
+                    
+                    <pre><code class="language-bash">npm i @cocreate/calculation</code></pre>
+                    <p class="padding:10px_0px">Or you can use cdn link:</p>
+                    <pre><code class="language-html">&lt;script&gt;https://cdn.cocreate.app/calculation/latest/CoCreate-calculation.min.js&lt;/script&gt;</code></pre>
 
-                <div>
-                   <h2 id="calculation-usage" data-hover="display:block" data-target="" class="border-bottom:1px_solid_lightgrey padding:5px_0px">Usage</h2>
-                   <a class="display:none" href="#calculation-usage"><i class="fas fa-link"></i></a>
-                </div>
+                    <div id="calculation-usage" class="margin-top:80px border-bottom:1px_solid_lightgrey">
+                        <span class="display:flex align-items:center" data-hover="display:block!important" data-hover_target='[href="#calculation-usage"]'>
+                            <h2 class="padding:5px_0px">Usage</h2>
+                            <a class="margin-left:10px display:none" href="#calculation-usage"><i class="fas fa-link"></i></a>
+                        </span>
+                    </div>
                     <div class="">
                         <p class="padding:10px_0px">This is calculations reference</p>
                 
                         <div class="flex-grow:1 min-width:300px width:100%">
                             <pre>
-                                <code>&lt;div&gt;&lt;/div&gt;</code>
+                                <code class="language-html">&lt;div&gt;&lt;/div&gt;</code>
                             </pre>
                         </div>
                         <p class="padding:10px_0px">This is calculations reference</p>
                         <p class="padding:10px_0px">This is calculations reference</p>
                     </div>
                     
-                    <div>
-                       <h2 id="calculation-attributes" data-hover="display:block" data-target="" class="border-bottom:1px_solid_lightgrey padding:5px_0px">Attributes</h2>
-                       <a class="display:none" href="#calculation-attributes"><i class="fas fa-link"></i></a>
+                    <div id="calculation-attributes" class="margin-top:80px border-bottom:1px_solid_lightgrey">
+                        <span class="display:flex align-items:center" data-hover="display:block!important" data-hover_target='[href="#calculation-attributes"]'>
+                            <h2 class="padding:5px_0px">Attributes</h2>
+                            <a class="margin-left:10px display:none" href="#calculation-attributes"><i class="fas fa-link"></i></a>
+                        </span>
                     </div>
                     <ul class="list-style-type:none ">
                         <li class="padding:15px_0px border-bottom:1px_solid_lightgrey">
@@ -75,9 +82,11 @@
                 <div class="flex-grow:1 width:300px padding:0px_10px margin:20px_0px  border-bottom:1px_solid_lightgrey">
                     
                     <!-- SandBox -->
-                    <div>
-                       <h2 id="calculation-demo" data-hover="display:block" data-target="" class="border-bottom:1px_solid_lightgrey padding:5px_0px">Demo</h2>
-                       <a class="display:none" href="#calculation-demo"><i class="fas fa-link"></i></a>
+                    <div id="calculation-demo" class="border-bottom:1px_solid_lightgrey">
+                        <span class="display:flex align-items:center" data-hover="display:block!important" data-hover_target='[href="#calculation-demo"]'>
+                            <h2 class="padding:5px_0px">Demo</h2>
+                            <a class="margin-left:10px display:none" href="#calculation-demo"><i class="fas fa-link"></i></a>
+                        </span>
                     </div>
                     <div class="position:sticky top:0 padding:15px_0px height:100vh">
     			    <div class="container svColumn overflow:hidden card border-radius:2px width:auto height:100%" id="form-sandbox">
