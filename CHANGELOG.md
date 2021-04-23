@@ -1,3 +1,10 @@
+## [1.0.7](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.0.6...v1.0.7) (2021-04-23)
+
+
+### Bug Fixes
+
+* readme and documentation. Removed securitykeys ([851605e](https://github.com/CoCreate-app/CoCreate-calculations/commit/851605e8e784657c1282e15a5d22d484728559a0))
+
 ## [1.0.6](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.0.5...v1.0.6) (2021-04-19)
 
 
