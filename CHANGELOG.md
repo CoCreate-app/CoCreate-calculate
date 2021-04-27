@@ -1,3 +1,10 @@
+## [1.0.8](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.0.7...v1.0.8) (2021-04-27)
+
+
+### Bug Fixes
+
+* Update to readme, demo, added cdn scripts ([00339db](https://github.com/CoCreate-app/CoCreate-calculations/commit/00339dbfd4a95e848f6e88748a4635f2e47b7f99))
+
 ## [1.0.7](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.0.6...v1.0.7) (2021-04-23)
 
 
