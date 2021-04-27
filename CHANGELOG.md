@@ -1,3 +1,10 @@
+## [1.0.9](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.0.8...v1.0.9) (2021-04-27)
+
+
+### Bug Fixes
+
+* add host in docs ([20c9ed2](https://github.com/CoCreate-app/CoCreate-calculations/commit/20c9ed245ea68902448cf26ad009abe6510dd198))
+
 ## [1.0.8](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.0.7...v1.0.8) (2021-04-27)
 
 
