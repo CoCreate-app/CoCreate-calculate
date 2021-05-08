@@ -861,6 +861,14 @@
     "@cocreate/socket-client" "^1.0.2"
     mini-css-extract-plugin "^1.5.0"
 
+"@cocreate/crud-client@^1.0.7":
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/@cocreate/crud-client/-/crud-client-1.0.8.tgz#5f19e88d3a5914d5b35d135ae23fc2326ff4bd91"
+  integrity sha512-JMx9Wd6mhHtIPIEihOI9CzwR+wddzR+cA8NWtgcuhrtpELB33RyJXHkWftORLPNU72n/9u7vSdy4OPvF3J3nbA==
+  dependencies:
+    "@cocreate/docs" "^1.0.3"
+    "@cocreate/socket-client" "^1.0.9"
+
 "@cocreate/cursors@^1.1.5":
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/@cocreate/cursors/-/cursors-1.1.6.tgz#0f6a327b91b502e5c15cff972167830b1e5e0d00"
@@ -904,6 +912,15 @@
     "@cocreate/utils" "^1.0.0"
     mini-css-extract-plugin "^1.5.0"
 
+"@cocreate/hosting@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@cocreate/hosting/-/hosting-1.0.0.tgz#33877f617f5d6a61a809266d7b629988ee592bb4"
+  integrity sha512-VuH0CsA+qs3AHhrjEHskZlkooHHD/+Hp/gUM3vu7caFETBbsdrcolrx0w9U+9whaoY48QcROgH5Dpp/gUSw6ag==
+  dependencies:
+    "@cocreate/crud-client" "^1.0.7"
+    "@cocreate/docs" "^1.0.3"
+    "@cocreate/socket-client" "^1.0.9"
+
 "@cocreate/htmltags@^1.0.6":
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/@cocreate/htmltags/-/htmltags-1.0.6.tgz#eec58585d53d8559959222b3feb735aefc635f29"
@@ -932,6 +949,15 @@
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/@cocreate/socket-client/-/socket-client-1.0.4.tgz#375f07f7134f564d6faf83b3d850fd276db19ff2"
   integrity sha512-ChZIqIqcgozeNPH2w1KoX0f8kFavmudnROi9V5kgUWq9o2qMqW2bPktsachEPFUawxpjkymYHQu4FT1TxLUnWw==
+  dependencies:
+    "@cocreate/docs" "^1.0.3"
+    mini-css-extract-plugin "^1.5.0"
+    ws "^7.4.4"
+
+"@cocreate/socket-client@^1.0.9":
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/@cocreate/socket-client/-/socket-client-1.0.9.tgz#e9604f906ef50bc6563832c61457d9b136591733"
+  integrity sha512-RWNcqJWkS+Y0nfJvA3dbEy4nV48vX9XGLtzjfXqYwvg9NfnZ+Nfis/+BnV1AK5aU6QC/XrxrSFcuEfrp+lc/mg==
   dependencies:
     "@cocreate/docs" "^1.0.3"
     mini-css-extract-plugin "^1.5.0"
