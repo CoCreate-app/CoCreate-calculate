@@ -1,3 +1,10 @@
+## [1.0.11](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.0.10...v1.0.11) (2021-06-16)
+
+
+### Bug Fixes
+
+* added header for seo ([b8e1018](https://github.com/CoCreate-app/CoCreate-calculations/commit/b8e10181901d7b84faeded5e63f265f5ce1b6bfc))
+
 ## [1.0.10](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.0.9...v1.0.10) (2021-05-08)
 
 
