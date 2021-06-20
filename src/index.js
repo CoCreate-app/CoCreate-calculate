@@ -280,18 +280,18 @@ CoCreateCalculation.init();
 CoCreateObserver.init({ 
 	name: 'CoCreateCalculationChangeValue', 
 	observe: ['attributes'],
-	attributes: ['value'],
-  include: 'input',
+	attributesFilter: ['value'],
 	callback: function(mutation) {
-	  console.log('-----------------------------------------------------')
+
+	  if(mutation.target.tagName === "INPUT")
 		console.log(mutation.target)
 	}
 });
 
 CoCreateObserver.init({ 
 	name: 'CoCreateCalculationInit', 
-	observe: ['subtree', 'childList'],
-  include: '[data-calculation]',
+	observe: ['addedNodes'],
+  attributesFilter: ['data-calculation'],
 	callback: function(mutation) {
 		CoCreateCalculation.initCalculationElements(mutation.target)
 	}
