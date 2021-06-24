@@ -21,9 +21,7 @@
     "html5-framework",
     "javascript-framework"
   ],
-  "publishConfig": {
-    "access": "public"
-  },
+  "publishConfig": { "access": "public" },
   "scripts": {
     "start": "npx webpack --config webpack.config.js",
     "build": "NODE_ENV=production npx webpack --config webpack.config.js",
@@ -62,13 +60,13 @@
     "webpack-log": "^3.0.1"
   },
   "dependencies": {
-    "@cocreate/crdt": "^1.0.11",
-    "@cocreate/crud-client": "^1.0.4",
-    "@cocreate/docs": "^1.0.3",
-    "@cocreate/floating-label": "^1.0.5",
-    "@cocreate/hosting": "^1.0.0",
-    "@cocreate/htmltags": "^1.0.6",
-    "@cocreate/input": "^1.0.6",
-    "@cocreate/observer": "^1.0.2"
+    "@cocreate/crdt": "latest",
+    "@cocreate/crud-client": "latest",
+    "@cocreate/docs": "latest",
+    "@cocreate/floating-label": "latest",
+    "@cocreate/hosting": "latest",
+    "@cocreate/htmltags": "latest",
+    "@cocreate/input": "latest",
+    "@cocreate/observer": "latest"
   }
 }
