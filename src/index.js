@@ -6,35 +6,17 @@ import floatingLabel from '@cocreate/floating-label'
 import htmltags from '@cocreate/htmltags'
 
 var CoCreateCalculation = {
-  init: function() {
-    this.initCalculationElements();
+  init: function(){
+     let calculationElements = document.querySelectorAll('[data-calculation]')
+      this.initElements(calculationElements)
   },
-    
-    
-  initCalculationElements: function(container) {
-    const mainContainer = container || document;
-    if (!mainContainer.querySelectorAll) {
-      return;
-    }
-    let calculationElements = mainContainer.querySelectorAll('[data-calculation]') || [];
-    calculationElements = Array.from(calculationElements);
-    
-    if (mainContainer != document && mainContainer.hasAttribute('data-calculation')) {
-      calculationElements.push(mainContainer);  
-    }
-    
-    for (let i=0; i<calculationElements.length; i++) {
-    	if (CoCreateObserver.getInitialized(calculationElements[i], "calculation_init")) {
-  			return;
-  		}
-  		CoCreateObserver.setInitialized(calculationElements[i], "calculation_init")
-  		
-      this.initCalculationElement(calculationElements[i]);  
-    }
-    
+  
+  initElements: function(elements) {
+    for(let el of elements)
+       this.initElement(el);  
   },
-    
-  initCalculationElement: function(ele) {
+  
+  initElement: function(ele) {
     
       const self = this;
       let data_calculation = ele.getAttribute('data-calculation');
@@ -277,23 +259,25 @@ function calculation(string) {
 
 CoCreateCalculation.init();
 
-CoCreateObserver.init({ 
-	name: 'CoCreateCalculationChangeValue', 
-	observe: ['attributes'],
-	attributesFilter: ['value'],
-	callback: function(mutation) {
 
-	  if(mutation.target.tagName === "INPUT")
-		console.log(mutation.target)
-	}
-});
+// CoCreateObserver.init({ 
+// 	name: 'CoCreateCalculationChangeValue', 
+// 	observe: ['attributes'],
+// 	attributeName: ['value'],
+// 	target: 'input',
+// 	callback: function(mutation) {
+
+// 	  if(mutation.target.tagName === "INPUT")
+// 		console.log(mutation.target)
+// 	}
+// });
 
 CoCreateObserver.init({ 
 	name: 'CoCreateCalculationInit', 
 	observe: ['addedNodes'],
-  attributesFilter: ['data-calculation'],
-	callback: function(mutation) {
-		CoCreateCalculation.initCalculationElements(mutation.target)
+  target: '[data-calculation]',
+	callback: function(mutation) { 
+		CoCreateCalculation.initElement(mutation.target)
 	}
 });
 
