@@ -1,3 +1,11 @@
+## [1.0.21](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.0.20...v1.0.21) (2021-07-17)
+
+
+### Bug Fixes
+
+* init and update demos scripts ([cc78295](https://github.com/CoCreate-app/CoCreate-calculations/commit/cc7829538ca2b1f171db1becccd4b29120a07900))
+* workflows ([37d5913](https://github.com/CoCreate-app/CoCreate-calculations/commit/37d5913a5ff703094c5f89855fde62749d361187))
+
 ## [1.0.20](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.0.19...v1.0.20) (2021-07-14)
 
 
