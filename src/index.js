@@ -264,17 +264,14 @@ function calculation(string) {
 CoCreateCalculation.init();
 
 
-// CoCreateObserver.init({ 
-// 	name: 'CoCreateCalculationChangeValue', 
-// 	observe: ['attributes'],
-// 	attributeName: ['value'],
-// 	target: 'input',
-// 	callback: function(mutation) {
-
-// 	  if(mutation.target.tagName === "INPUT")
-// 		console.log(mutation.target)
-// 	}
-// });
+CoCreateObserver.init({ 
+	name: 'CoCreateCalculationChangeValue', 
+	observe: ['attributes'],
+	attributeName: ['data-calculation'],
+	callback: function(mutation) {
+    CoCreateCalculation.setCalcationResult(mutation.target);
+	}
+});
 
 CoCreateObserver.init({ 
 	name: 'CoCreateCalculationInit', 
