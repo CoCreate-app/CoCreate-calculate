@@ -54,8 +54,12 @@ var CoCreateCalculation = {
             selectors.push(selector)
           }
         }
+            self.setCalcationResult(ele);
       }
       
+      if (selectors.length === 0) {
+            self.setCalcationResult(ele);
+      }
       if (selectors.length > 0) {
         document.addEventListener('changedCalcValue', function(e) {
 
