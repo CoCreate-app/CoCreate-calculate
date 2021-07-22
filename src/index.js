@@ -6,6 +6,7 @@ import floatingLabel from '@cocreate/floating-label'
 import htmltags from '@cocreate/htmltags'
 
 var CoCreateCalculation = {
+  
   init: function(){
      let calculationElements = document.querySelectorAll('[data-calculation]')
       this.initElements(calculationElements)
