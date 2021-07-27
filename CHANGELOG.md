@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.1.0...v1.1.1) (2021-07-27)
+
+
+### Bug Fixes
+
+* update calculation function to have full calculation support ([ae3b8c9](https://github.com/CoCreate-app/CoCreate-calculations/commit/ae3b8c92c2809cffd6376bcb2aee097c8dcbc53a))
+
 # [1.1.0](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.0.21...v1.1.0) (2021-07-21)
 
 
