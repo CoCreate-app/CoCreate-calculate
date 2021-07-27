@@ -219,62 +219,8 @@ var CoCreateCalculation = {
 }
 
 function calculation(string) {
-    let index1, index2, index3, index4;
-
-    index1 = string.indexOf('+');
-    index2 = string.indexOf('-');
-    index3 = string.indexOf('*');
-    index4 = string.indexOf('/');
-
-
-    if(index1 > -1) {
-        let lStr = string.substr(0, index1);
-        let rStr = string.substr(index1 + 1);
-
-        return calculation(lStr) + calculation(rStr);
-
-    }
-    else if(index2 > -1) {
-        let lStr = string.substr(0, index2);
-        let rStr = string.substr(index2 + 1);
-
-        return calculation(lStr) - calculation(rStr);
-
-    }
-    else if(index3 > -1) {
-        let lStr = string.substr(0, index3);
-        let rStr = string.substr(index3 + 1);
-
-        return calculation(lStr) * calculation(rStr);
-    }
-    else if(index4 > -1) {
-        let lStr = string.substr(0, index4);
-        let rStr = string.substr(index4 + 1);
-
-        let lValue = calculation(lStr);
-        let rValue = calculation(rStr);
-
-        if(rValue == 0) {
-            return 0;
-        }
-        else {
-            return lValue / rValue;
-        }
-
-    }
-    else {
-        let result = Number(string);
-
-        if(isNaN(result)) {
-            return 0;
-        }
-        else {
-            return result;
-        }
-
-
-    }
-
+    if(!string.match(/[a-z_]/i))
+        return eval(string);
 }
 
 CoCreateCalculation.init();
