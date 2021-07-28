@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.2.0...v1.2.1) (2021-07-28)
+
+
+### Bug Fixes
+
+* remove data- from fetch, pass and filter ([046e02d](https://github.com/CoCreate-app/CoCreate-calculations/commit/046e02d4612ad1598446d7355308ef392a95793e))
+
 # [1.2.0](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.1.1...v1.2.0) (2021-07-28)
 
 
