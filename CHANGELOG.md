@@ -29,7 +29,7 @@
 
 ### Features
 
-* observe attribute data-calculation for changes and recalculate ([6d67a76](https://github.com/CoCreate-app/CoCreate-calculations/commit/6d67a7658c69bf3f3372461b903ac04d61d65e11))
+* observe attribute calculate for changes and recalculate ([6d67a76](https://github.com/CoCreate-app/CoCreate-calculations/commit/6d67a7658c69bf3f3372461b903ac04d61d65e11))
 
 ## [1.0.21](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.0.20...v1.0.21) (2021-07-17)
 

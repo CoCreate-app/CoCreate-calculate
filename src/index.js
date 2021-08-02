@@ -8,7 +8,7 @@ import htmltags from '@cocreate/htmltags'
 var CoCreateCalculation = {
 
     init: function() {
-        let calculationElements = document.querySelectorAll('[data-calculation]')
+        let calculationElements = document.querySelectorAll('[calculate]')
         this.initElements(calculationElements)
     },
 
@@ -19,7 +19,7 @@ var CoCreateCalculation = {
 
     initElement: function(ele) {
         const self = this;
-        let data_calculation = ele.getAttribute('data-calculation');
+        let data_calculation = ele.getAttribute('calculate');
         let ids = this.getIds(data_calculation);
 
         let selectors = [];
@@ -41,7 +41,7 @@ var CoCreateCalculation = {
                     // self.setCalcationResult(ele)
                 })
 
-                if(input.hasAttribute('data-calculation')) {
+                if(input.hasAttribute('calculate')) {
                     input.addEventListener('changedCalcValue', function(e) {
                         self.setCalcationResult(ele)
                     })
@@ -113,7 +113,7 @@ var CoCreateCalculation = {
 
     setCalcationResult: function(ele) {
         const { collection, document_id, name, isCrdt } = crud.getAttr(ele)
-        let data_calculation = ele.getAttribute('data-calculation');
+        let data_calculation = ele.getAttribute('calculate');
 
         let calString = this.replaceIdWithValue(data_calculation);
 
@@ -229,7 +229,7 @@ CoCreateCalculation.init();
 CoCreateObserver.init({
     name: 'CoCreateCalculationChangeValue',
     observe: ['attributes'],
-    attributeName: ['data-calculation'],
+    attributeName: ['calculate'],
     callback: function(mutation) {
         CoCreateCalculation.setCalcationResult(mutation.target);
     }
@@ -238,7 +238,7 @@ CoCreateObserver.init({
 CoCreateObserver.init({
     name: 'CoCreateCalculationInit',
     observe: ['addedNodes'],
-    target: '[data-calculation]',
+    target: '[calculate]',
     callback: function(mutation) {
         CoCreateCalculation.initElement(mutation.target)
     }
