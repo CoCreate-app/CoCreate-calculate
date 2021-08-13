@@ -1,15 +1,14 @@
-import CoCreateObserver from '@cocreate/observer'
-import crdt from '@cocreate/crdt'
-import crud from '@cocreate/crud-client'
-import CoCreateInput from '@cocreate/input'
-import floatingLabel from '@cocreate/floating-label'
-import htmltags from '@cocreate/htmltags'
+import CoCreateObserver from '@cocreate/observer';
+import crud from '@cocreate/crud-client';
+import CoCreateInput from '@cocreate/input';
+import floatingLabel from '@cocreate/floating-label';
+import htmltags from '@cocreate/htmltags';
 
 var CoCreateCalculation = {
 
     init: function() {
-        let calculationElements = document.querySelectorAll('[calculate]')
-        this.initElements(calculationElements)
+        let calculationElements = document.querySelectorAll('[calculate]');
+        this.initElements(calculationElements);
     },
 
     initElements: function(elements) {
@@ -35,16 +34,16 @@ var CoCreateCalculation = {
             if(input) {
                 input.addEventListener('input', function() {
                     self.setCalcationResult(ele);
-                })
+                });
 
                 input.addEventListener('CoCreateInput-setvalue', function() {
                     // self.setCalcationResult(ele)
-                })
+                });
 
                 if(input.hasAttribute('calculate')) {
                     input.addEventListener('changedCalcValue', function(e) {
-                        self.setCalcationResult(ele)
-                    })
+                        self.setCalcationResult(ele);
+                    });
                 }
 
             }
@@ -53,7 +52,7 @@ var CoCreateCalculation = {
 
                 let selector = this.__getOperatorSelector(id);
                 if(selector) {
-                    selectors.push(selector)
+                    selectors.push(selector);
                 }
             }
             self.setCalcationResult(ele);
@@ -71,12 +70,12 @@ var CoCreateCalculation = {
                         isMatched = true;
                         return;
                     }
-                })
+                });
 
                 if(isMatched) {
                     self.setCalcationResult(ele);
                 }
-            })
+            });
         }
     },
 
@@ -93,10 +92,10 @@ var CoCreateCalculation = {
         let sum = null;
         let result = /SUM\(\s*([\w\W]+)\s*\)/g.exec(value);
         if(result) {
-            let selector = result[1].trim()
+            let selector = result[1].trim();
 
             if(value.trim().indexOf('SUM') == 0) {
-                let elements = document.querySelectorAll(selector)
+                let elements = document.querySelectorAll(selector);
                 sum = 0;
                 elements.forEach(el => {
                     let tmpValue = self.__getElementValue(el);
@@ -104,51 +103,50 @@ var CoCreateCalculation = {
                     if(!Number.isNaN(tmpValue)) {
                         sum += tmpValue;
                     }
-                })
+                });
             }
         }
-        return sum
+        return sum;
     },
 
 
     setCalcationResult: function(ele) {
-        const { collection, document_id, name, isCrdt } = crud.getAttr(ele)
+        const { isRealtime } = crud.getAttr(ele);
         let data_calculation = ele.getAttribute('calculate');
 
         let calString = this.replaceIdWithValue(data_calculation);
 
         if(calString) {
             let result = calculation(calString);
+            
             if(ele.tagName == 'INPUT' || ele.tagName == 'TEXTAREA' || ele.tagName == 'SELECT') {
                 ele.value = result
-
-                if(isCrdt == "true") {
-                    ele.value = "";
-                    crdt.replaceText({
-                        collection: collection,
-                        document_id: document_id,
-                        name: name,
-                        value: result.toString()
-                    })
-                }
-                else {
+                // ToDo: if isCrud
+				if (isRealtime != "false") {
                     CoCreateInput.save(ele);
-                }
-
+                } 
+                else {
+                    ele.value = result;
+                } 
+                
                 if(floatingLabel) {
-                    floatingLabel.update(ele, ele.value)
+                    floatingLabel.update(ele, ele.value);
                 }
             }
             else {
-                ele.innerHTML = result;
-                // htmltags.saveContent(ele);
-                htmltags.save(ele)
+                // ToDo: if isCrud
+                if (isRealtime != "false") {
+                    htmltags.save(ele);
+                } 
+                else {
+                    ele.innerHTML = result;
+                } 
             }
 
             //. set custom event
             var event = new CustomEvent('changedCalcValue', {
                 bubbles: true,
-            })
+            });
             ele.dispatchEvent(event);
         }
 
@@ -195,7 +193,7 @@ var CoCreateCalculation = {
     getIds: function(string) {
         let tmp = string;
 
-        let ids = []
+        let ids = [];
         if(!tmp) return ids;
         while(tmp.length > 0) {
             let firstIndex = tmp.indexOf('{');
@@ -216,7 +214,7 @@ var CoCreateCalculation = {
 
         return ids;
     },
-}
+};
 
 function calculation(string) {
     if(!string.match(/[a-z_]/i))
@@ -240,7 +238,7 @@ CoCreateObserver.init({
     observe: ['addedNodes'],
     target: '[calculate]',
     callback: function(mutation) {
-        CoCreateCalculation.initElement(mutation.target)
+        CoCreateCalculation.initElement(mutation.target);
     }
 });
 
