@@ -1,3 +1,10 @@
+## [1.2.6](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.2.5...v1.2.6) (2021-08-22)
+
+
+### Bug Fixes
+
+* removed data- from main-content, clone, filter-value_type ([7b10e5f](https://github.com/CoCreate-app/CoCreate-calculations/commit/7b10e5fb3147da0af0d625d35b5290b85f33163d))
+
 ## [1.2.5](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.2.4...v1.2.5) (2021-08-22)
 
 
