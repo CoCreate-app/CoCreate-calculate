@@ -1,6 +1,6 @@
 {
   "name": "@cocreate/calculation",
-  "version": "1.2.9",
+  "version": "1.2.10",
   "description": "A handy vanilla JavaScript calculator, concatenate multiple elements containing integers & execute calculations. Can be used for creating  invoices,making payments & any kind of complex calculation. Easily configured using HTML5 data-attributes and/or JavaScript API.",
   "keywords": [
     "calculation",
