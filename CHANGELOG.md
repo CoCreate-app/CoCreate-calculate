@@ -1,3 +1,10 @@
+## [1.2.16](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.2.15...v1.2.16) (2021-09-12)
+
+
+### Bug Fixes
+
+* update sidenav to use resize and toggle ([8d006c4](https://github.com/CoCreate-app/CoCreate-calculations/commit/8d006c443d4e078ef5d95d1307464fb7398360ff))
+
 ## [1.2.15](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.2.14...v1.2.15) (2021-09-09)
 
 
