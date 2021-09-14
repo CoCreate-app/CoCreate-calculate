@@ -1,3 +1,10 @@
+## [1.2.18](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.2.17...v1.2.18) (2021-09-14)
+
+
+### Bug Fixes
+
+* add cocreate.app to domains ([05c65a7](https://github.com/CoCreate-app/CoCreate-calculations/commit/05c65a7f1c043b00ecdea8585099848390cd304e))
+
 ## [1.2.17](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.2.16...v1.2.17) (2021-09-13)
 
 
