@@ -1,6 +1,6 @@
 # CoCreate-calculation
 
-A handy vanilla JavaScript calculator, concatenate multiple elements containing integers & execute calculations. Can be used for creating invoices,making payments & any kind of complex calculation. Easily configured using HTML5 data-attributes and/or JavaScript API. Take it for a spin in our [playground!](https://cocreate.app/docs/calculation)
+A handy vanilla JavaScript calculator, concatenate multiple elements containing integers & execute calculations. Can be used for creating invoices,making payments & any kind of complex calculation. Easily configured using HTML5 attributes and/or JavaScript API. Take it for a spin in our [playground!](https://cocreate.app/docs/calculation)
 
 ![minified](https://img.badgesize.io/https://cdn.cocreate.app/calculation/latest/CoCreate-calculation.min.js?style=flat-square&label=minified&color=orange)
 ![gzip](https://img.badgesize.io/https://cdn.cocreate.app/calculation/latest/CoCreate-calculation.min.js?compression=gzip&style=flat-square&label=gzip&color=yellow)
