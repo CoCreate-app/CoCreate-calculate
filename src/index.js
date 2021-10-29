@@ -1,8 +1,6 @@
 import CoCreateObserver from '@cocreate/observer';
 import crud from '@cocreate/crud-client';
-import CoCreateInput from '@cocreate/input';
-import floatingLabel from '@cocreate/floating-label';
-import htmltags from '@cocreate/htmltags';
+import elements from '@cocreate/elements';
 
 var CoCreateCalculation = {
 
@@ -123,20 +121,16 @@ var CoCreateCalculation = {
                 ele.value = result
                 // ToDo: if isCrud
 				if (isRealtime != "false") {
-                    CoCreateInput.save(ele);
+                    elements.save(ele);
                 } 
                 else {
                     ele.value = result;
                 } 
-                
-                if(floatingLabel) {
-                    floatingLabel.update(ele, ele.value);
-                }
             }
             else {
                 // ToDo: if isCrud
                 if (isRealtime != "false") {
-                    htmltags.save(ele);
+                    elements.save(ele);
                 } 
                 else {
                     ele.innerHTML = result;
