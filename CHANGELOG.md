@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.2.35...v1.3.0) (2021-11-02)
+
+
+### Features
+
+* now uses el.setValue and el.getValue... any new componenets that want to intergrate with calculation needs to add the setValue and getValue function to the element ([82b9778](https://github.com/CoCreate-app/CoCreate-calculations/commit/82b97788df352d600b96ea9d709c0aa4b380d7ee))
+
 ## [1.2.35](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.2.34...v1.2.35) (2021-11-01)
 
 
