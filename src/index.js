@@ -96,7 +96,7 @@ var CoCreateCalculation = {
                 let elements = document.querySelectorAll(selector);
                 sum = 0;
                 elements.forEach(el => {
-                    let tmpValue = self.__getElementValue(el);
+                    let tmpValue = el.getValue(el);
                     tmpValue = Number(tmpValue);
                     if(!Number.isNaN(tmpValue)) {
                         sum += tmpValue;
@@ -117,26 +117,13 @@ var CoCreateCalculation = {
         if(calString) {
             let result = calculation(calString);
             
-            if(ele.tagName == 'INPUT' || ele.tagName == 'TEXTAREA' || ele.tagName == 'SELECT') {
-                ele.value = result
-                // ToDo: if isCrud
+            if (ele.setValue) {
+                ele.setValue(ele, result)
 				if (isRealtime != "false") {
                     elements.save(ele);
                 } 
-                else {
-                    ele.value = result;
-                } 
             }
-            else {
-                // ToDo: if isCrud
-                if (isRealtime != "false") {
-                    elements.save(ele);
-                } 
-                else {
-                    ele.innerHTML = result;
-                } 
-            }
-
+            
             //. set custom event
             var event = new CustomEvent('changedCalcValue', {
                 bubbles: true,
@@ -144,15 +131,6 @@ var CoCreateCalculation = {
             ele.dispatchEvent(event);
         }
 
-    },
-
-    __getElementValue: function(element) {
-        if(element.tagName == 'INPUT' || element.tagName == 'TEXTAREA' || element.tagName == 'SELECT') {
-            return element.value;
-        }
-        else {
-            return element.innerHTML;
-        }
     },
 
     replaceIdWithValue: function(data_calculation) {
@@ -170,7 +148,7 @@ var CoCreateCalculation = {
 
             let value = null;
             if(input) {
-                value = Number(this.__getElementValue(input));
+                value = Number(input.getValue(input));
             }
             else {
                 value = this.calculationSpecialOperator(id);
