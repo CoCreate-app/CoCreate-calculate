@@ -34,10 +34,6 @@ var CoCreateCalculation = {
                     self.setCalcationResult(ele);
                 });
 
-                input.addEventListener('CoCreateInput-setvalue', function() {
-                    // self.setCalcationResult(ele)
-                });
-
                 if(input.hasAttribute('calculate')) {
                     input.addEventListener('changedCalcValue', function(e) {
                         self.setCalcationResult(ele);
