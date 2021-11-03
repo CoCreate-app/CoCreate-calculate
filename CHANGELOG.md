@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.3.0...v1.3.1) (2021-11-03)
+
+
+### Bug Fixes
+
+* removed depreciated eventListenr that originated from cocreate-elements ([ca3948b](https://github.com/CoCreate-app/CoCreate-calculations/commit/ca3948b9bb17e55044fb0096e66050c724793ad8))
+
 # [1.3.0](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.2.35...v1.3.0) (2021-11-02)
 
 
