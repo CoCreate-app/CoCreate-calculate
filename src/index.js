@@ -189,9 +189,6 @@ function calculation(string) {
         return eval(string);
 }
 
-CoCreateCalculation.init();
-
-
 CoCreateObserver.init({
     name: 'CoCreateCalculationChangeValue',
     observe: ['attributes'],
@@ -209,5 +206,7 @@ CoCreateObserver.init({
         CoCreateCalculation.initElement(mutation.target);
     }
 });
+
+CoCreateCalculation.init();
 
 export default CoCreateCalculation;
