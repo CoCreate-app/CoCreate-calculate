@@ -1,3 +1,10 @@
+## [1.3.6](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.3.5...v1.3.6) (2021-11-07)
+
+
+### Bug Fixes
+
+* add init() directly above export default to fix bug in firefox ([54a6f3a](https://github.com/CoCreate-app/CoCreate-calculations/commit/54a6f3a448c1e2f2de5d83e6d23905463da4d2c6))
+
 ## [1.3.5](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.3.4...v1.3.5) (2021-11-06)
 
 
