@@ -1,4 +1,4 @@
-import CoCreateObserver from '@cocreate/observer';
+import observer from '@cocreate/observer';
 import crud from '@cocreate/crud-client';
 import elements from '@cocreate/elements';
 
@@ -21,21 +21,40 @@ var CoCreateCalculation = {
 
         for(let i = 0; i < selectors.length; i++) {
             let id = selectors[i];
-
+            if (id.includes('{{')) return;
+            
+            // self.initEvents(ele, id);
             let inputs = document.querySelectorAll(id);
             for (let input of inputs){
-                input.addEventListener('input', function() {
-                    self.setCalcationResult(ele);
-                });
-
-                // if(input.hasAttribute('calculate')) {
-                //     input.addEventListener('changedCalcValue', function(e) {
-                //         self.setCalcationResult(ele);
-                //     });
-                // }
+                self.initEvent(ele, input);
             }
+            
+            observer.init({
+                name: 'calculationSelectorInit',
+                observe: ['addedNodes'],
+                target: id,
+                callback: function(mutation) {
+                    self.initEvent(ele, mutation.target);
+                    self.setCalcationResult(ele);
+                }
+            });
+            
             self.setCalcationResult(ele);
         }
+    },
+    
+    initEvent: function(ele, input) {
+        const self = this;
+        input.addEventListener('input', function() {
+            self.setCalcationResult(ele);
+        });
+
+        // if(input.hasAttribute('calculate')) {
+        //     input.addEventListener('changedCalcValue', function(e) {
+        //         self.setCalcationResult(ele);
+        //     });
+        // }
+    // self.setCalcationResult(ele);
     },
     
     getSelectors: function(string) {
@@ -137,7 +156,7 @@ function calculate(string) {
         return eval(string);
 }
 
-CoCreateObserver.init({
+observer.init({
     name: 'CoCreateCalculationChangeValue',
     observe: ['attributes'],
     attributeName: ['calculate'],
@@ -146,7 +165,7 @@ CoCreateObserver.init({
     }
 });
 
-CoCreateObserver.init({
+observer.init({
     name: 'CoCreateCalculationInit',
     observe: ['addedNodes'],
     target: '[calculate]',
