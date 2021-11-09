@@ -1,3 +1,10 @@
+## [1.3.7](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.3.6...v1.3.7) (2021-11-09)
+
+
+### Bug Fixes
+
+* if element.getValue does not exist get value using component elements elements.getValue() ([91c1f2c](https://github.com/CoCreate-app/CoCreate-calculations/commit/91c1f2cff406207b170dccb0b1e79edd1ef2c743))
+
 ## [1.3.6](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.3.5...v1.3.6) (2021-11-07)
 
 
