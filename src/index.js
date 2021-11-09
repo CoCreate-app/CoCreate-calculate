@@ -144,7 +144,10 @@ var CoCreateCalculation = {
 
             let value = null;
             if(input) {
-                value = Number(input.getValue(input));
+                if(input.getValue)
+                    value = Number(input.getValue(input));
+                else
+                    value = elements.getValue(input);
             }
             else {
                 value = this.calculationSpecialOperator(id);
