@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.4.0...v1.4.1) (2021-11-09)
+
+
+### Bug Fixes
+
+* add observer to each selector to detect if a new selector is added ([b9ea96a](https://github.com/CoCreate-app/CoCreate-calculations/commit/b9ea96afc0f13b4575e8c91c8cc8149bbfcbe736))
+
 # [1.4.0](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.3.7...v1.4.0) (2021-11-09)
 
 
