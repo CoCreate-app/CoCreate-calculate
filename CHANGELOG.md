@@ -1,3 +1,10 @@
+## [1.4.9](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.4.8...v1.4.9) (2021-11-26)
+
+
+### Bug Fixes
+
+* docs sidenav width ([ea9f6f6](https://github.com/CoCreate-app/CoCreate-calculations/commit/ea9f6f6011eb416d1002e85877b4453b6e51163b))
+
 ## [1.4.8](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.4.7...v1.4.8) (2021-11-26)
 
 
