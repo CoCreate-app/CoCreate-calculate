@@ -1,3 +1,10 @@
+## [1.4.10](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.4.9...v1.4.10) (2021-11-27)
+
+
+### Bug Fixes
+
+* update docs api and cocreateJS script ([08d541e](https://github.com/CoCreate-app/CoCreate-calculations/commit/08d541e4c1956fffb140dfbe1f38e9c3eb26e2a4))
+
 ## [1.4.9](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.4.8...v1.4.9) (2021-11-26)
 
 
