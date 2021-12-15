@@ -1,3 +1,10 @@
+## [1.4.14](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.4.13...v1.4.14) (2021-12-15)
+
+
+### Bug Fixes
+
+* update dependencies ([134e22e](https://github.com/CoCreate-app/CoCreate-calculations/commit/134e22e498c26f36e8b5d4fece2dda129693212a))
+
 ## [1.4.13](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.4.12...v1.4.13) (2021-12-14)
 
 
