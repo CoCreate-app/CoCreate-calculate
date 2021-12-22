@@ -112,7 +112,7 @@ var CoCreateCalculation = {
     },
     
     setCalcationResult: function(element) {
-        const { isRealtime } = crud.getAttr(element);
+        const { document_id, isRealtime } = crud.getAttr(element);
         let calculation = element.getAttribute('calculate');
 
         let calString = this.getValues(calculation);
@@ -123,7 +123,7 @@ var CoCreateCalculation = {
             // ToDO: input event below triggers save for all input elements but will not save for regular elements
             if (element.setValue) {
                 element.setValue(element, result)
-				if (isRealtime != "false") {
+				if (document_id && isRealtime != "false") {
                     elements.save(element);
                 } 
             }
