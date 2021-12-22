@@ -1,3 +1,10 @@
+## [1.4.15](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.4.14...v1.4.15) (2021-12-22)
+
+
+### Bug Fixes
+
+* save calculation result using crud if document_id exist ([697618f](https://github.com/CoCreate-app/CoCreate-calculations/commit/697618f82279da522a3c753a0233fa4170fb621b))
+
 ## [1.4.14](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.4.13...v1.4.14) (2021-12-15)
 
 
