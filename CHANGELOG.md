@@ -1,3 +1,10 @@
+## [1.4.18](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.4.17...v1.4.18) (2022-02-03)
+
+
+### Bug Fixes
+
+* replaced show and hide class hidden with attribute hidden ([ae1c2e5](https://github.com/CoCreate-app/CoCreate-calculations/commit/ae1c2e50589ee47bdf0adaf0f525baa5c747ec26))
+
 ## [1.4.17](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.4.16...v1.4.17) (2022-02-01)
 
 
