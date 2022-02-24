@@ -1,3 +1,10 @@
+## [1.4.22](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.4.21...v1.4.22) (2022-02-24)
+
+
+### Bug Fixes
+
+* CoCreate.config replace CoCreate.app with * ([85d893e](https://github.com/CoCreate-app/CoCreate-calculations/commit/85d893e3e9f5154e1960a7d185e14beaa0eda1fa))
+
 ## [1.4.21](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.4.20...v1.4.21) (2022-02-16)
 
 
