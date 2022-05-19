@@ -1,3 +1,10 @@
+## [1.4.24](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.4.23...v1.4.24) (2022-05-19)
+
+
+### Bug Fixes
+
+* update document_id on link index.css ([ff071ad](https://github.com/CoCreate-app/CoCreate-calculations/commit/ff071ad863805cfda70aa9d1bc07ee6f23031bae))
+
 ## [1.4.23](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.4.22...v1.4.23) (2022-05-06)
 
 
