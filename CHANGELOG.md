@@ -1,3 +1,11 @@
+## [1.4.26](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.4.25...v1.4.26) (2022-06-12)
+
+
+### Bug Fixes
+
+* update dependencies ([63372ae](https://github.com/CoCreate-app/CoCreate-calculations/commit/63372ae184455762e6996b55c1c8514ca3afb51a))
+* update docs css document_id ([301076b](https://github.com/CoCreate-app/CoCreate-calculations/commit/301076bd89ae5f8c31e42ef79d75fca4d8a274d1))
+
 ## [1.4.25](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.4.24...v1.4.25) (2022-05-23)
 
 
