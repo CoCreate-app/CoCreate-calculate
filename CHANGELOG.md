@@ -1,3 +1,10 @@
+## [1.4.28](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.4.27...v1.4.28) (2022-08-31)
+
+
+### Bug Fixes
+
+* getValue and setValue using HTMLElement.prototype ([3f76632](https://github.com/CoCreate-app/CoCreate-calculations/commit/3f766326c82bac6faab6da7f467fd917d200171d))
+
 ## [1.4.27](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.4.26...v1.4.27) (2022-06-18)
 
 
