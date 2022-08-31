@@ -94,9 +94,9 @@ var CoCreateCalculation = {
             for(let input of inputs){
                 let val = null;
                 if(input.getValue)
-                    val = Number(input.getValue(input));
+                    val = Number(input.getValue());
                 else
-                    val = elements.getValue(input);            
+                    val = elements.getValue();            
                 val = Number(val);
                 if(!Number.isNaN(value)) {
                     value += val;
@@ -122,7 +122,7 @@ var CoCreateCalculation = {
             
             // ToDO: input event below triggers save for all input elements but will not save for regular elements
             if (element.setValue) {
-                element.setValue(element, result)
+                element.setValue(result)
 				if (document_id && isRealtime != "false") {
                     elements.save(element);
                 } 
