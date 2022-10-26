@@ -1,6 +1,12 @@
 import observer from '@cocreate/observer';
-import crud from '@cocreate/crud-client';
+import CRUD from '@cocreate/crud-client';
 import elements from '@cocreate/elements';
+
+let crud
+if(CRUD && CRUD.default)
+	crud = CRUD.default
+else
+	crud = CRUD
 
 var CoCreateCalculation = {
 
