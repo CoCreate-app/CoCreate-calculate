@@ -1,6 +1,6 @@
 import observer from '@cocreate/observer';
 import CRUD from '@cocreate/crud-client';
-import elements from '@cocreate/elements';
+import '@cocreate/element-prototype';
 
 let crud
 if(CRUD && CRUD.default)
@@ -101,9 +101,7 @@ var CoCreateCalculation = {
                 let val = null;
                 if(input.getValue)
                     val = Number(input.getValue());
-                else
-                    val = elements.getValue();            
-                val = Number(val);
+                
                 if(!Number.isNaN(value)) {
                     value += val;
                 }
@@ -130,7 +128,7 @@ var CoCreateCalculation = {
             if (element.setValue) {
                 element.setValue(result)
 				if (document_id && isRealtime != "false") {
-                    elements.save(element);
+                    crud.save(element, result);
                 } 
             }
             else {
