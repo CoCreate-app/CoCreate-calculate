@@ -116,7 +116,7 @@ var CoCreateCalculation = {
     },
     
     setCalcationResult: function(element) {
-        const { document_id, isRealtime } = crud.getAttr(element);
+        const { document_id, isRealtime } = crud.getAttributes(element);
         let calculation = element.getAttribute('calculate');
 
         let calString = this.getValues(calculation);
