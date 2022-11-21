@@ -1,3 +1,16 @@
+# [1.5.0](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.4.37...v1.5.0) (2022-11-21)
+
+
+### Bug Fixes
+
+* crud.getAttr renamed to crud.getAttributes ([38d6660](https://github.com/CoCreate-app/CoCreate-calculations/commit/38d66609dd78c8e64302ebd9363bd516152686b5))
+* update crud functions to receive an array of objects as the response ([c6792e3](https://github.com/CoCreate-app/CoCreate-calculations/commit/c6792e3e5e04e17fa8a392a2ba272c01d519c063))
+
+
+### Features
+
+* Add @cocreate/element-prototype ([26b6dbe](https://github.com/CoCreate-app/CoCreate-calculations/commit/26b6dbe7eeeae1db14d2e5cb70484dc727cf811b))
+
 ## [1.4.37](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.4.36...v1.4.37) (2022-10-02)
 
 
