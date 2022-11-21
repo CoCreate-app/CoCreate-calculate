@@ -1,3 +1,10 @@
+## [1.5.3](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.5.2...v1.5.3) (2022-11-21)
+
+
+### Bug Fixes
+
+* replaced document_id with document._id ([5d639be](https://github.com/CoCreate-app/CoCreate-calculations/commit/5d639beb640f4766558eb7f81962b958887332fa))
+
 ## [1.5.2](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.5.1...v1.5.2) (2022-11-21)
 
 
