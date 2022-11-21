@@ -1,3 +1,10 @@
+## [1.5.4](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.5.3...v1.5.4) (2022-11-21)
+
+
+### Bug Fixes
+
+* @cocreate/docs bug fix ([cada662](https://github.com/CoCreate-app/CoCreate-calculations/commit/cada662b69c2fd0826302c594c70b40c55108d43))
+
 ## [1.5.3](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.5.2...v1.5.3) (2022-11-21)
 
 
