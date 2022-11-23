@@ -3,7 +3,7 @@ import CRUD from '@cocreate/crud-client';
 import '@cocreate/element-prototype';
 
 let crud
-if(CRUD && CRUD.default)
+if (CRUD && CRUD.default)
 	crud = CRUD.default
 else
 	crud = CRUD
@@ -55,7 +55,7 @@ var CoCreateCalculation = {
             self.setCalcationResult(ele);
         });
 
-        // if(input.hasAttribute('calculate')) {
+        // if (input.hasAttribute('calculate')) {
         //     input.addEventListener('changedCalcValue', function(e) {
         //         self.setCalcationResult(ele);
         //     });
@@ -67,15 +67,15 @@ var CoCreateCalculation = {
         let tmp = string;
 
         let selectors = [];
-        if(!tmp) return selectors;
+        if (!tmp) return selectors;
         while(tmp.length > 0) {
             let firstIndex = tmp.indexOf('{');
             let secondIndex = tmp.indexOf('}', firstIndex);
 
-            if(firstIndex > -1 && secondIndex > -1) {
+            if (firstIndex > -1 && secondIndex > -1) {
                 let id = tmp.substring(firstIndex + 1, secondIndex);
 
-                if(selectors.indexOf(id) == -1) selectors.push(id);
+                if (selectors.indexOf(id) == -1) selectors.push(id);
 
                 tmp = tmp.substring(secondIndex + 1);
 
@@ -99,15 +99,15 @@ var CoCreateCalculation = {
             
             for(let input of inputs){
                 let val = null;
-                if(input.getValue)
+                if (input.getValue)
                     val = Number(input.getValue());
                 
-                if(!Number.isNaN(value)) {
+                if (!Number.isNaN(value)) {
                     value += val;
                 }
             }
 
-            if(value != null && !Number.isNaN(value)) {
+            if (value != null && !Number.isNaN(value)) {
                 calculation = calculation.replaceAll('{' + selector + '}', value);
             }
         }
@@ -121,7 +121,7 @@ var CoCreateCalculation = {
 
         let calString = this.getValues(calculation);
 
-        if(calString) {
+        if (calString) {
             let result = calculate(calString);
             
             // ToDO: input event below triggers save for all input elements but will not save for regular elements
@@ -132,7 +132,7 @@ var CoCreateCalculation = {
                 } 
             }
             else {
-                // if(element.value){
+                // if (element.value){
                     
                 // }
                 // else {
@@ -156,7 +156,7 @@ var CoCreateCalculation = {
 };
 
 function calculate(string) {
-    if(!string.match(/[a-z_]/i))
+    if (!string.match(/[a-z_]/i))
         return eval(string);
 }
 
