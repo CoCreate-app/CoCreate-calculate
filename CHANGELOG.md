@@ -1,3 +1,11 @@
+## [1.5.9](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.5.8...v1.5.9) (2022-11-25)
+
+
+### Bug Fixes
+
+* bump dependencies ([e4b33c6](https://github.com/CoCreate-app/CoCreate-calculations/commit/e4b33c676919003a14fd4094a41ba2893e473168))
+* CoCreate.crud.default removed bug causing default object ([986ee58](https://github.com/CoCreate-app/CoCreate-calculations/commit/986ee5863870586ff7b5c7c7e926983ec15f1b58))
+
 ## [1.5.8](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.5.7...v1.5.8) (2022-11-24)
 
 
