@@ -1,3 +1,10 @@
+## [1.5.23](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.5.22...v1.5.23) (2022-12-13)
+
+
+### Bug Fixes
+
+* removed un used devDependencies ([5d4d5ff](https://github.com/CoCreate-app/CoCreate-calculations/commit/5d4d5ffb356a8b913647911a0e797711a1ad1dd3))
+
 ## [1.5.22](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.5.21...v1.5.22) (2022-12-13)
 
 
