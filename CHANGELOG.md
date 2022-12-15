@@ -1,3 +1,10 @@
+## [1.5.24](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.5.23...v1.5.24) (2022-12-15)
+
+
+### Bug Fixes
+
+* add missing dev dependency style-loader ([fc70c8c](https://github.com/CoCreate-app/CoCreate-calculations/commit/fc70c8c179f9d8535a94ce1a7512056e20684ccb))
+
 ## [1.5.23](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.5.22...v1.5.23) (2022-12-13)
 
 
