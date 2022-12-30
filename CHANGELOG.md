@@ -1,3 +1,10 @@
+## [1.5.33](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.5.32...v1.5.33) (2022-12-30)
+
+
+### Bug Fixes
+
+* update config sources to use template  braces with entry on src ([4caa0c3](https://github.com/CoCreate-app/CoCreate-calculations/commit/4caa0c3cc8dc32271db554f8f75ffcd9a6a9cf7b))
+
 ## [1.5.32](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.5.31...v1.5.32) (2022-12-29)
 
 
