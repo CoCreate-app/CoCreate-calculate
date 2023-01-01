@@ -1,3 +1,10 @@
+## [1.5.35](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.5.34...v1.5.35) (2023-01-01)
+
+
+### Bug Fixes
+
+* docs sanbox overflow ([1a1a391](https://github.com/CoCreate-app/CoCreate-calculations/commit/1a1a391c3a2be3a89a3376c24513c166fc32989b))
+
 ## [1.5.34](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.5.33...v1.5.34) (2022-12-31)
 
 
