@@ -1,3 +1,11 @@
+## [1.5.36](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.5.35...v1.5.36) (2023-01-05)
+
+
+### Bug Fixes
+
+* bump cdn to 1.39.4 ([d48897d](https://github.com/CoCreate-app/CoCreate-calculations/commit/d48897d2c92e5b7895bba92a45da971e9cc70f55))
+* bump dependencies ([1edd0fc](https://github.com/CoCreate-app/CoCreate-calculations/commit/1edd0fc66210c740e58584d54d9363fe71acba40))
+
 ## [1.5.35](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.5.34...v1.5.35) (2023-01-01)
 
 
