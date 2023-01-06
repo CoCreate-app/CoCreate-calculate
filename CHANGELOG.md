@@ -1,3 +1,11 @@
+## [1.5.37](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.5.36...v1.5.37) (2023-01-06)
+
+
+### Bug Fixes
+
+* bump dependencies, worklow [@v3](https://github.com/v3) ([c467a53](https://github.com/CoCreate-app/CoCreate-calculations/commit/c467a539224f586e45561db85dd853a6c0bbfef5))
+* edit in github btn styles ([b87e4ad](https://github.com/CoCreate-app/CoCreate-calculations/commit/b87e4ad7bc6393a797975c17f4ce5487167686d7))
+
 ## [1.5.36](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.5.35...v1.5.36) (2023-01-05)
 
 
