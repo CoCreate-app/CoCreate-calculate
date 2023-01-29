@@ -59,7 +59,7 @@
     "webpack-log": "^3.0.1"
   },
   "dependencies": {
-    "@cocreate/crud-client": "^1.18.0",
+    "@cocreate/crud-client": "^1.18.2",
     "@cocreate/docs": "^1.5.9",
     "@cocreate/element-prototype": "^1.4.6",
     "@cocreate/floating-label": "^1.4.66",
