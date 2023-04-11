@@ -1,3 +1,10 @@
+## [1.6.4](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.6.3...v1.6.4) (2023-04-11)
+
+
+### Bug Fixes
+
+* renamed domains to hosts ([78ac61c](https://github.com/CoCreate-app/CoCreate-calculations/commit/78ac61cedd1c8b649123728fad7f4031f14159ba))
+
 ## [1.6.3](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.6.2...v1.6.3) (2023-03-30)
 
 
