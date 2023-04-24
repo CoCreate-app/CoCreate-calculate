@@ -1,3 +1,10 @@
+## [1.7.1](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.7.0...v1.7.1) (2023-04-24)
+
+
+### Bug Fixes
+
+* removed uglifyjs-webpack-plugin ([0769f51](https://github.com/CoCreate-app/CoCreate-calculations/commit/0769f51a8c242643a6a02920bad38b05af1417b2))
+
 # [1.7.0](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.6.6...v1.7.0) (2023-04-24)
 
 
