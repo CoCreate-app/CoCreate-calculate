@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.6.6...v1.7.0) (2023-04-24)
+
+
+### Features
+
+* added pwa manifest ([8bbe65e](https://github.com/CoCreate-app/CoCreate-calculations/commit/8bbe65eb1b42039627298643ed2ac29435b79d37))
+
 ## [1.6.6](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.6.5...v1.6.6) (2023-04-11)
 
 
