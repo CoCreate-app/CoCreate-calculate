@@ -1,3 +1,10 @@
+## [1.7.4](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.7.3...v1.7.4) (2023-04-24)
+
+
+### Bug Fixes
+
+* updated worrkflows to v3 and node version 16 ([9d53f58](https://github.com/CoCreate-app/CoCreate-calculations/commit/9d53f58fd0cb44a4cc3b73c99d6dfbe511774c5a))
+
 ## [1.7.3](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.7.2...v1.7.3) (2023-04-24)
 
 
