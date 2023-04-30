@@ -1,3 +1,12 @@
+## [1.7.5](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.7.4...v1.7.5) (2023-04-30)
+
+
+### Bug Fixes
+
+* fullscreen target updated to fullscreen fullscreen-target ([5b70a68](https://github.com/CoCreate-app/CoCreate-calculations/commit/5b70a68ba0c85feba0aa6b495f27d430f3372714))
+* package-lock.json and pnpm-lock.yaml added to .gitignore ([1ab28f0](https://github.com/CoCreate-app/CoCreate-calculations/commit/1ab28f0d55cd245ae884d2473370cda336d46fde))
+* removed toogle fullscreen icons. now using css content ([0a5bfa7](https://github.com/CoCreate-app/CoCreate-calculations/commit/0a5bfa76b00dbea3c3d620e5190b2c19b8fca72e))
+
 ## [1.7.4](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.7.3...v1.7.4) (2023-04-24)
 
 
