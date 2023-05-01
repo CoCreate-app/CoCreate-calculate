@@ -1,3 +1,10 @@
+## [1.7.7](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.7.6...v1.7.7) (2023-05-01)
+
+
+### Bug Fixes
+
+* update manifest.json to manifest.webmanifest ([9cfac7e](https://github.com/CoCreate-app/CoCreate-calculations/commit/9cfac7e5402f762e26dc52369bfcf0f3343d3f86))
+
 ## [1.7.6](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.7.5...v1.7.6) (2023-05-01)
 
 
