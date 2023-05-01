@@ -1,3 +1,10 @@
+## [1.7.6](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.7.5...v1.7.6) (2023-05-01)
+
+
+### Bug Fixes
+
+* replace fontawesome with svg ([3ff7963](https://github.com/CoCreate-app/CoCreate-calculations/commit/3ff7963dbe8657d39e552b13ec16ce25c8e4312f))
+
 ## [1.7.5](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.7.4...v1.7.5) (2023-04-30)
 
 
