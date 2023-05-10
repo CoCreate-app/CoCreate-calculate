@@ -1,3 +1,10 @@
+## [1.7.9](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.7.8...v1.7.9) (2023-05-10)
+
+
+### Bug Fixes
+
+* apikey renamed to key ([affc4ab](https://github.com/CoCreate-app/CoCreate-calculations/commit/affc4ab4a0c7577afaa0111ba497583a165dceee))
+
 ## [1.7.8](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.7.7...v1.7.8) (2023-05-06)
 
 
