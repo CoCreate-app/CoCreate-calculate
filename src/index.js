@@ -118,7 +118,7 @@ var CoCreateCalculation = {
         if (calString) {
             let result = calculate(calString);
             
-            // ToDO: input event below triggers save for all input elements but will not save for regular elements
+            // TODO: input event below triggers save for all input elements but will not save for regular elements
             if (element.setValue) {
                 element.setValue(result)
 				if (document_id && isRealtime != "false") {
