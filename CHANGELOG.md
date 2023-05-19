@@ -1,3 +1,10 @@
+## [1.7.10](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.7.9...v1.7.10) (2023-05-19)
+
+
+### Bug Fixes
+
+* update packages to latest version. This commit updates various packages in the dependencies section of the package.json file to their latest published versions, thereby fixing multiple bugs and improving overall performance. ([20dc4e1](https://github.com/CoCreate-app/CoCreate-calculations/commit/20dc4e1a33ec7590ba09de91d5b2866cabd9ded6))
+
 ## [1.7.9](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.7.8...v1.7.9) (2023-05-10)
 
 
