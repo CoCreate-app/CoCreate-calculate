@@ -65,6 +65,6 @@
     "@cocreate/element-prototype": "^1.8.12",
     "@cocreate/floating-label": "^1.7.3",
     "@cocreate/hosting": "^1.10.5",
-    "@cocreate/observer": "^1.7.10"
+    "@cocreate/observer": "^1.8.0"
   }
 }
