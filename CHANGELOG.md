@@ -1,3 +1,10 @@
+## [1.7.15](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.7.14...v1.7.15) (2023-06-04)
+
+
+### Bug Fixes
+
+* Refactor CoCreate.config.js to remove hard-coded credentials ([23e57f5](https://github.com/CoCreate-app/CoCreate-calculations/commit/23e57f56e1a6024cee79b470c345b3609ab2ba6b))
+
 ## [1.7.14](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.7.13...v1.7.14) (2023-06-04)
 
 
