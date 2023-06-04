@@ -1,3 +1,11 @@
+## [1.7.14](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.7.13...v1.7.14) (2023-06-04)
+
+
+### Bug Fixes
+
+* replaced secert GITHUB_TOKEN with GITHUB ([c104727](https://github.com/CoCreate-app/CoCreate-calculations/commit/c104727f3c0e252c221666171af911d404e77896))
+* Update dependencies versions for [@cocreate](https://github.com/cocreate) libraries ([7efdb9e](https://github.com/CoCreate-app/CoCreate-calculations/commit/7efdb9efce7f7a3c08bf8cab4926402a0413ff59))
+
 ## [1.7.13](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.7.12...v1.7.13) (2023-06-04)
 
 
