@@ -1,3 +1,10 @@
+## [1.7.20](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.7.19...v1.7.20) (2023-06-11)
+
+
+### Bug Fixes
+
+* @cocreate/cli moved to dependencies ([40b3e2d](https://github.com/CoCreate-app/CoCreate-calculations/commit/40b3e2da923e2ad0a6fd2faa4330245123a6be23))
+
 ## [1.7.19](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.7.18...v1.7.19) (2023-06-11)
 
 
