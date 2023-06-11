@@ -1,3 +1,10 @@
+## [1.7.22](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.7.21...v1.7.22) (2023-06-11)
+
+
+### Bug Fixes
+
+* Update dependencies versions for [@cocreate](https://github.com/cocreate) libraries ([e5b64f3](https://github.com/CoCreate-app/CoCreate-calculations/commit/e5b64f3b06549f99bd152bb85f0ffe94f6b222f3))
+
 ## [1.7.21](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.7.20...v1.7.21) (2023-06-11)
 
 
