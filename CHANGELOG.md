@@ -1,3 +1,10 @@
+## [1.7.23](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.7.22...v1.7.23) (2023-06-11)
+
+
+### Bug Fixes
+
+* testing workflow ([6c42c3c](https://github.com/CoCreate-app/CoCreate-calculations/commit/6c42c3cfcde698a111a7ea57957b14ea0559a352))
+
 ## [1.7.22](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.7.21...v1.7.22) (2023-06-11)
 
 
