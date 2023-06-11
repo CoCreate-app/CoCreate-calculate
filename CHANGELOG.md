@@ -1,3 +1,10 @@
+## [1.7.21](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.7.20...v1.7.21) (2023-06-11)
+
+
+### Bug Fixes
+
+* postintall error ([7da5eda](https://github.com/CoCreate-app/CoCreate-calculations/commit/7da5eda3aa867d64f07d4a0d476fbb7cd6979ba1))
+
 ## [1.7.20](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.7.19...v1.7.20) (2023-06-11)
 
 
