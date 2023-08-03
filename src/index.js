@@ -4,48 +4,48 @@ import '@cocreate/element-prototype';
 
 var CoCreateCalculation = {
 
-    init: function() {
+    init: function () {
         let calculationElements = document.querySelectorAll('[calculate]');
         this.initElements(calculationElements);
     },
 
-    initElements: function(elements) {
-        for(let el of elements)
+    initElements: function (elements) {
+        for (let el of elements)
             this.initElement(el);
     },
 
-    initElement: function(ele) {
+    initElement: function (ele) {
         const self = this;
         let calculation = ele.getAttribute('calculate');
         let selectors = this.getSelectors(calculation);
 
-        for(let i = 0; i < selectors.length; i++) {
+        for (let i = 0; i < selectors.length; i++) {
             let id = selectors[i];
             if (id.includes('{{')) return;
-            
+
             // self.initEvents(ele, id);
             let inputs = document.querySelectorAll(id);
-            for (let input of inputs){
+            for (let input of inputs) {
                 self.initEvent(ele, input);
             }
-            
+
             observer.init({
                 name: 'calculationSelectorInit',
                 observe: ['addedNodes'],
                 target: id,
-                callback: function(mutation) {
+                callback: function (mutation) {
                     self.initEvent(ele, mutation.target);
                     self.setCalcationResult(ele);
                 }
             });
-            
+
             self.setCalcationResult(ele);
         }
     },
-    
-    initEvent: function(ele, input) {
+
+    initEvent: function (ele, input) {
         const self = this;
-        input.addEventListener('input', function() {
+        input.addEventListener('input', function () {
             self.setCalcationResult(ele);
         });
 
@@ -54,15 +54,15 @@ var CoCreateCalculation = {
         //         self.setCalcationResult(ele);
         //     });
         // }
-    // self.setCalcationResult(ele);
+        // self.setCalcationResult(ele);
     },
-    
-    getSelectors: function(string) {
+
+    getSelectors: function (string) {
         let tmp = string;
 
         let selectors = [];
         if (!tmp) return selectors;
-        while(tmp.length > 0) {
+        while (tmp.length > 0) {
             let firstIndex = tmp.indexOf('{');
             let secondIndex = tmp.indexOf('}', firstIndex);
 
@@ -82,20 +82,20 @@ var CoCreateCalculation = {
         return selectors;
     },
 
-    getValues: function(calculation) {
+    getValues: function (calculation) {
         let selectors = this.getSelectors(calculation);
 
-        for(let i = 0; i < selectors.length; i++) {
+        for (let i = 0; i < selectors.length; i++) {
             let selector = selectors[i];
 
             let value = null;
             let inputs = document.querySelectorAll(selector);
-            
-            for(let input of inputs){
+
+            for (let input of inputs) {
                 let val = null;
                 if (input.getValue)
                     val = Number(input.getValue());
-                
+
                 if (!Number.isNaN(value)) {
                     value += val;
                 }
@@ -108,36 +108,36 @@ var CoCreateCalculation = {
 
         return calculation;
     },
-    
-    setCalcationResult: function(element) {
-        const { document_id, isRealtime } = crud.getAttributes(element);
+
+    setCalcationResult: function (element) {
+        const { object, isRealtime } = crud.getAttributes(element);
         let calculation = element.getAttribute('calculate');
 
         let calString = this.getValues(calculation);
 
         if (calString) {
             let result = calculate(calString);
-            
+
             // TODO: input event below triggers save for all input elements but will not save for regular elements
             if (element.setValue) {
                 element.setValue(result)
-				if (document_id && isRealtime != "false") {
+                if (object && isRealtime != "false") {
                     crud.save(element, result);
-                } 
+                }
             }
             else {
                 // if (element.value){
-                    
+
                 // }
                 // else {
-                    element.innerHTML = result;
+                element.innerHTML = result;
                 // }
             }
-            
+
             let inputEvent = new CustomEvent('input', { bubbles: true });
             Object.defineProperty(inputEvent, 'target', { writable: false, value: element });
             element.dispatchEvent(inputEvent);
-            
+
             //. set custom event
             // var event = new CustomEvent('changedCalcValue', {
             //     bubbles: true,
@@ -146,7 +146,7 @@ var CoCreateCalculation = {
         }
 
     },
-    
+
 };
 
 function calculate(string) {
@@ -158,7 +158,7 @@ observer.init({
     name: 'CoCreateCalculationChangeValue',
     observe: ['attributes'],
     attributeName: ['calculate'],
-    callback: function(mutation) {
+    callback: function (mutation) {
         CoCreateCalculation.setCalcationResult(mutation.target);
     }
 });
@@ -167,7 +167,7 @@ observer.init({
     name: 'CoCreateCalculationInit',
     observe: ['addedNodes'],
     target: '[calculate]',
-    callback: function(mutation) {
+    callback: function (mutation) {
         CoCreateCalculation.initElement(mutation.target);
     }
 });
