@@ -1,5 +1,5 @@
 import observer from '@cocreate/observer';
-import crud from '@cocreate/crud-client';
+import { getAttributes } from '@cocreate/utils';
 import '@cocreate/element-prototype';
 
 var CoCreateCalculation = {
@@ -110,7 +110,7 @@ var CoCreateCalculation = {
     },
 
     setCalcationResult: function (element) {
-        const { object, isRealtime } = crud.getAttributes(element);
+        const { object, isRealtime } = getAttributes(element);
         let calculation = element.getAttribute('calculate');
 
         let calString = this.getValues(calculation);
@@ -122,7 +122,7 @@ var CoCreateCalculation = {
             if (element.setValue) {
                 element.setValue(result)
                 if (object && isRealtime != "false") {
-                    crud.save(element, result);
+                    element.save(element);
                 }
             }
             else {
