@@ -1,3 +1,18 @@
+# [1.8.0](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.7.29...v1.8.0) (2023-08-16)
+
+
+### Bug Fixes
+
+* crud attributes renamed ([d453c5c](https://github.com/CoCreate-app/CoCreate-calculations/commit/d453c5cb43af67728340b6e84396213572e884a4))
+* removed @cocreate/crud-client and import @cocreate/utils getAttributeNames function ([c8a213c](https://github.com/CoCreate-app/CoCreate-calculations/commit/c8a213c766ae9b0011ec72aaeaae2edeb202eb85))
+* replace -target -selector ([f0421c4](https://github.com/CoCreate-app/CoCreate-calculations/commit/f0421c41466cfc1985a6923bb3f2d117d4932b61))
+* webpack.config and package.json make use of mode=production instead of process.env ([2f4d515](https://github.com/CoCreate-app/CoCreate-calculations/commit/2f4d515be21a16b2b8bbd12ef93b5b05f42f6db4))
+
+
+### Features
+
+* name attribute and variable renamed to key ([8644d7a](https://github.com/CoCreate-app/CoCreate-calculations/commit/8644d7adbc83de768683c52935ba12c12b07c62e))
+
 ## [1.7.29](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.7.28...v1.7.29) (2023-06-14)
 
 
