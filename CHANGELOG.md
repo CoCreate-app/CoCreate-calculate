@@ -1,3 +1,12 @@
+## [1.9.1](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.9.0...v1.9.1) (2023-08-21)
+
+
+### Bug Fixes
+
+* /dist/CoCreate.js updated to https://CoCreate.app/dist/CoCreate.js ([7555c38](https://github.com/CoCreate-app/CoCreate-calculations/commit/7555c38d3e18a9d22fb85c9530512673f29e709d))
+* replace cdn with /dist ([9f17b5f](https://github.com/CoCreate-app/CoCreate-calculations/commit/9f17b5fbcfb9a26fc6e48ce044bcd59b87ecf232))
+* update file uploader ([2eec11b](https://github.com/CoCreate-app/CoCreate-calculations/commit/2eec11b36b1106edad870fe501522d02d81f0c84))
+
 # [1.9.0](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.8.0...v1.9.0) (2023-08-17)
 
 
