@@ -8,17 +8,16 @@ module.exports = {
             "object": {
                 "_id": "6019bade4eea0817df303b0a",
                 "name": "index.html",
-                "path": "/docs/calculation/index.html",
+                "path": "/docs/calculation",
+                "pathname": "/docs/calculation/index.html",
                 "src": "{{./docs/index.html}}",
                 "host": [
                     "*",
                     "general.cocreate.app"
                 ],
-                "directory": "/docs/calculation",
-                "parentDirectory": "{{parentDirectory}}",
+                "directory": "calculation",
                 "content-type": "{{content-type}}",
-                "public": "true",
-                "website_id": "644d4bff8036fb9d1d1fd69c"
+                "public": "true"
             }
         }
     ]
