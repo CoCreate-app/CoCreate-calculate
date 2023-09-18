@@ -1,3 +1,11 @@
+## [1.10.2](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.10.1...v1.10.2) (2023-09-18)
+
+
+### Bug Fixes
+
+*  Add path and pathname ([a0e57bf](https://github.com/CoCreate-app/CoCreate-calculations/commit/a0e57bf568d4d99e55de4bb5ec367cdcfdcb21b4))
+* Update CoCreate depndencies to latest versions ([b030c75](https://github.com/CoCreate-app/CoCreate-calculations/commit/b030c75cdd0ff2a7019662d860d66a0fe65cffbf))
+
 ## [1.10.1](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.10.0...v1.10.1) (2023-08-21)
 
 
