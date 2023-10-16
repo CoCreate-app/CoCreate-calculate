@@ -82,7 +82,7 @@ var CoCreateCalculation = {
         return selectors;
     },
 
-    getValues: function (calculation) {
+    getValues: async function (calculation) {
         let selectors = this.getSelectors(calculation);
 
         for (let i = 0; i < selectors.length; i++) {
@@ -94,7 +94,7 @@ var CoCreateCalculation = {
             for (let input of inputs) {
                 let val = null;
                 if (input.getValue)
-                    val = Number(input.getValue());
+                    val = Number(await input.getValue());
 
                 if (!Number.isNaN(value)) {
                     value += val;
@@ -109,11 +109,11 @@ var CoCreateCalculation = {
         return calculation;
     },
 
-    setCalcationResult: function (element) {
+    setCalcationResult: async function (element) {
         const { object, isRealtime } = getAttributes(element);
         let calculation = element.getAttribute('calculate');
 
-        let calString = this.getValues(calculation);
+        let calString = await this.getValues(calculation);
 
         if (calString) {
             let result = calculate(calString);
