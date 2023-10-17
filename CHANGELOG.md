@@ -1,3 +1,10 @@
+## [1.10.7](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.10.6...v1.10.7) (2023-10-17)
+
+
+### Bug Fixes
+
+* await getValue() ([72009b6](https://github.com/CoCreate-app/CoCreate-calculations/commit/72009b6cb4c56eda0c11fd930d0740ca3db63ddb))
+
 ## [1.10.6](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.10.5...v1.10.6) (2023-10-14)
 
 
