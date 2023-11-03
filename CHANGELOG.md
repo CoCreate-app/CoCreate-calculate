@@ -1,3 +1,11 @@
+## [1.10.9](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.10.8...v1.10.9) (2023-11-03)
+
+
+### Bug Fixes
+
+* favicon.ico path ([fa86f3c](https://github.com/CoCreate-app/CoCreate-calculations/commit/fa86f3c34abb7329f45150e69d246e7305147a0d))
+* update dependencies to the lates versions ([a17f8b1](https://github.com/CoCreate-app/CoCreate-calculations/commit/a17f8b12409a3a4907f0236cc0f9f49e6a49023e))
+
 ## [1.10.8](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.10.7...v1.10.8) (2023-10-25)
 
 
