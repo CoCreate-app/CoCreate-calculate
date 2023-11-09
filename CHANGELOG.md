@@ -1,3 +1,11 @@
+## [1.10.10](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.10.9...v1.10.10) (2023-11-09)
+
+
+### Bug Fixes
+
+* meta name typo ([6c0a368](https://github.com/CoCreate-app/CoCreate-calculations/commit/6c0a368e399cdc7504a56bd0a9f83c0a65de0cbd))
+* update host ([53d8d97](https://github.com/CoCreate-app/CoCreate-calculations/commit/53d8d975f4e8c6551fe26f8f09d1a9c9a3e5d281))
+
 ## [1.10.9](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.10.8...v1.10.9) (2023-11-03)
 
 
