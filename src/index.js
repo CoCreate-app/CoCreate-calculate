@@ -1,156 +1,148 @@
 import observer from '@cocreate/observer';
 import { getAttributes } from '@cocreate/utils';
+// import { renderValue } from '@cocreate/render';
 import '@cocreate/element-prototype';
 
-var CoCreateCalculation = {
 
-    init: function () {
-        let calculationElements = document.querySelectorAll('[calculate]');
-        this.initElements(calculationElements);
-    },
+function init() {
+    let calculationElements = document.querySelectorAll('[calculate]');
+    initElements(calculationElements);
+}
 
-    initElements: function (elements) {
-        for (let el of elements)
-            this.initElement(el);
-    },
+function initElements(elements) {
+    for (let el of elements)
+        initElement(el);
+}
 
-    initElement: function (ele) {
-        const self = this;
-        let calculation = ele.getAttribute('calculate');
-        let selectors = this.getSelectors(calculation);
+function initElement(element) {
+    let calculation = element.getAttribute('calculate');
+    if (calculation.includes('{{') || calculation.includes('{['))
+        return;
 
-        for (let i = 0; i < selectors.length; i++) {
-            let id = selectors[i];
-            if (id.includes('{{')) return;
+    let selectors = getSelectors(calculation);
 
-            // self.initEvents(ele, id);
-            let inputs = document.querySelectorAll(id);
-            for (let input of inputs) {
-                self.initEvent(ele, input);
-            }
+    for (let i = 0; i < selectors.length; i++) {
+        // if (selectors[i].includes('{{')) return;
 
-            observer.init({
-                name: 'calculationSelectorInit',
-                observe: ['addedNodes'],
-                target: id,
-                callback: function (mutation) {
-                    self.initEvent(ele, mutation.target);
-                    self.setCalcationResult(ele);
-                }
-            });
-
-            self.setCalcationResult(ele);
+        // initEvents(element, selectors[i]);
+        let inputs = document.querySelectorAll(selectors[i]);
+        for (let input of inputs) {
+            initEvent(element, input);
         }
-    },
 
-    initEvent: function (ele, input) {
-        const self = this;
-        input.addEventListener('input', function () {
-            self.setCalcationResult(ele);
+        observer.init({
+            name: 'calculationSelectorInit',
+            observe: ['addedNodes'],
+            target: selectors[i],
+            callback(mutation) {
+                initEvent(element, mutation.target);
+                setCalcationResult(element);
+            }
         });
+    }
+    setCalcationResult(element);
+}
 
-        // if (input.hasAttribute('calculate')) {
-        //     input.addEventListener('changedCalcValue', function(e) {
-        //         self.setCalcationResult(ele);
-        //     });
-        // }
-        // self.setCalcationResult(ele);
-    },
+function getSelectors(string) {
+    let regex = /\{\((?:(?!\{\().)*?\)\}/;
+    let selectors = [];
 
-    getSelectors: function (string) {
-        let tmp = string;
+    let match;
+    while ((match = regex.exec(string)) !== null) {
+        // Extract the content inside the braces (excluding the leading '{(' and trailing ')}')
+        let selector = match[0].slice(2, -2);
 
-        let selectors = [];
-        if (!tmp) return selectors;
-        while (tmp.length > 0) {
-            let firstIndex = tmp.indexOf('{');
-            let secondIndex = tmp.indexOf('}', firstIndex);
+        if (selectors.indexOf(selector) === -1) {
+            selectors.push(selector);
+        }
 
-            if (firstIndex > -1 && secondIndex > -1) {
-                let id = tmp.substring(firstIndex + 1, secondIndex);
+        // Replace the found match with an empty string to avoid reprocessing in the next iteration
+        string = string.replace(match[0], '');
+    }
 
-                if (selectors.indexOf(id) == -1) selectors.push(id);
+    return selectors;
+}
 
-                tmp = tmp.substring(secondIndex + 1);
+async function getValues(calculation) {
+    let selectors = getSelectors(calculation);
 
-            }
-            else {
-                return selectors;
+    for (let i = 0; i < selectors.length; i++) {
+        let selector = selectors[i];
+
+        let value = null;
+        let inputs = document.querySelectorAll(selector);
+
+        for (let input of inputs) {
+            let val = null;
+            if (input.getValue)
+                val = Number(await input.getValue());
+
+            if (!Number.isNaN(value)) {
+                value += val;
             }
         }
 
-        return selectors;
-    },
+        if (value != null && !Number.isNaN(value)) {
+            calculation = calculation.replaceAll('{' + selector + '}', value);
+        }
+    }
 
-    getValues: async function (calculation) {
-        let selectors = this.getSelectors(calculation);
+    return calculation;
+}
 
-        for (let i = 0; i < selectors.length; i++) {
-            let selector = selectors[i];
+function initEvent(element, input) {
+    input.addEventListener('input', function () {
+        setCalcationResult(element);
+    });
 
-            let value = null;
-            let inputs = document.querySelectorAll(selector);
+    // if (input.hasAttribute('calculate')) {
+    //     input.addEventListener('changedCalcValue', function(e) {
+    //         setCalcationResult(element);
+    //     });
+    // }
+    // setCalcationResult(element);
+}
 
-            for (let input of inputs) {
-                let val = null;
-                if (input.getValue)
-                    val = Number(await input.getValue());
+async function setCalcationResult(element) {
+    const { object, isRealtime } = getAttributes(element);
+    let calculation = element.getAttribute('calculate');
 
-                if (!Number.isNaN(value)) {
-                    value += val;
-                }
-            }
+    let calString = await getValues(calculation);
 
-            if (value != null && !Number.isNaN(value)) {
-                calculation = calculation.replaceAll('{' + selector + '}', value);
+    if (calString) {
+        let result = calculate(calString);
+
+        // TODO: input event below triggers save for all input elements but will not save for regular elements
+        if (element.setValue) {
+            element.setValue(result)
+            if (object && isRealtime != "false") {
+                element.save(element);
             }
         }
+        else {
+            // if (element.value){
 
-        return calculation;
-    },
-
-    setCalcationResult: async function (element) {
-        const { object, isRealtime } = getAttributes(element);
-        let calculation = element.getAttribute('calculate');
-
-        let calString = await this.getValues(calculation);
-
-        if (calString) {
-            let result = calculate(calString);
-
-            // TODO: input event below triggers save for all input elements but will not save for regular elements
-            if (element.setValue) {
-                element.setValue(result)
-                if (object && isRealtime != "false") {
-                    element.save(element);
-                }
-            }
-            else {
-                // if (element.value){
-
-                // }
-                // else {
-                element.innerHTML = result;
-                // }
-            }
-
-            let inputEvent = new CustomEvent('input', { bubbles: true });
-            Object.defineProperty(inputEvent, 'target', { writable: false, value: element });
-            element.dispatchEvent(inputEvent);
-
-            //. set custom event
-            // var event = new CustomEvent('changedCalcValue', {
-            //     bubbles: true,
-            // });
-            // element.dispatchEvent(event);
+            // }
+            // else {
+            element.innerHTML = result;
+            // }
         }
 
-    },
+        let inputEvent = new CustomEvent('input', { bubbles: true });
+        Object.defineProperty(inputEvent, 'target', { writable: false, value: element });
+        element.dispatchEvent(inputEvent);
 
-};
+        //. set custom event
+        // var event = new CustomEvent('changedCalcValue', {
+        //     bubbles: true,
+        // });
+        // element.dispatchEvent(event);
+    }
+
+}
 
 function calculate(string) {
-    if (!string.match(/[a-z_]/i))
+    if (/^[0-9+\-*/()%||?\s:=.]*$/.test(string))
         return eval(string);
 }
 
@@ -158,8 +150,8 @@ observer.init({
     name: 'CoCreateCalculationChangeValue',
     observe: ['attributes'],
     attributeName: ['calculate'],
-    callback: function (mutation) {
-        CoCreateCalculation.setCalcationResult(mutation.target);
+    callback(mutation) {
+        setCalcationResult(mutation.target);
     }
 });
 
@@ -167,11 +159,11 @@ observer.init({
     name: 'CoCreateCalculationInit',
     observe: ['addedNodes'],
     target: '[calculate]',
-    callback: function (mutation) {
-        CoCreateCalculation.initElement(mutation.target);
+    callback(mutation) {
+        initElement(mutation.target);
     }
 });
 
-CoCreateCalculation.init();
+init();
 
-export default CoCreateCalculation;
+export default { initElements, initElement, calculate };
