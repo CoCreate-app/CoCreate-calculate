@@ -1,3 +1,10 @@
+# [1.12.0](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.11.0...v1.12.0) (2023-11-22)
+
+
+### Features
+
+* calculte supports tenary and conditionals ([a74713e](https://github.com/CoCreate-app/CoCreate-calculations/commit/a74713e68a3b7ec71d8a37c3c60212d1e2bd188b))
+
 # [1.11.0](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.10.11...v1.11.0) (2023-11-19)
 
 
