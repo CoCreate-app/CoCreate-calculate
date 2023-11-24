@@ -1,9 +1,9 @@
 {
-  "name": "@cocreate/calculation",
+  "name": "@cocreate/calculate",
   "version": "1.14.0",
-  "description": "A handy vanilla JavaScript calculator, concatenate multiple elements containing integers & execute calculations. Can be used for creating  invoices,making payments & any kind of complex calculation. Easily configured using HTML5 attributes and/or JavaScript API.",
+  "description": "A handy vanilla JavaScript calculator, concatenate multiple elements containing integers & execute calculates. Can be used for creating  invoices,making payments & any kind of complex calculate. Easily configured using HTML5 attributes and/or JavaScript API.",
   "keywords": [
-    "calculation",
+    "calculate",
     "calculate-values",
     "calculate-total",
     "cocreate",
@@ -32,14 +32,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CoCreate-app/CoCreate-calculations.git"
+    "url": "git+https://github.com/CoCreate-app/CoCreate-calculate.git"
   },
   "author": "CoCreate LLC",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/CoCreate-app/CoCreate-calculations/issues"
+    "url": "https://github.com/CoCreate-app/CoCreate-calculate/issues"
   },
-  "homepage": "https://cocreate.app/docs/calculations",
+  "homepage": "https://cocreate.app/docs/calculate",
   "funding": {
     "type": "GitHub Sponsors ❤",
     "url": "https://github.com/sponsors/CoCreate-app"

@@ -5,8 +5,8 @@ import '@cocreate/element-prototype';
 
 
 function init() {
-    let calculationElements = document.querySelectorAll('[calculate]');
-    initElements(calculationElements);
+    let calculateElements = document.querySelectorAll('[calculate]');
+    initElements(calculateElements);
 }
 
 function initElements(elements) {
@@ -15,11 +15,11 @@ function initElements(elements) {
 }
 
 function initElement(element) {
-    let calculation = element.getAttribute('calculate');
-    if (calculation.includes('{{') || calculation.includes('{['))
+    let calculate = element.getAttribute('calculate');
+    if (calculate.includes('{{') || calculate.includes('{['))
         return;
 
-    let selectors = getSelectors(calculation);
+    let selectors = getSelectors(calculate);
 
     for (let i = 0; i < selectors.length; i++) {
         // if (selectors[i].includes('{{')) return;
@@ -31,7 +31,7 @@ function initElement(element) {
         }
 
         observer.init({
-            name: 'calculationSelectorInit',
+            name: 'calculateSelectorInit',
             observe: ['addedNodes'],
             target: selectors[i],
             callback(mutation) {
@@ -63,8 +63,8 @@ function getSelectors(string) {
     return selectors;
 }
 
-async function getValues(calculation) {
-    let selectors = getSelectors(calculation);
+async function getValues(calculate) {
+    let selectors = getSelectors(calculate);
 
     for (let i = 0; i < selectors.length; i++) {
         let selector = selectors[i];
@@ -83,11 +83,11 @@ async function getValues(calculation) {
         }
 
         if (value != null && !Number.isNaN(value)) {
-            calculation = calculation.replaceAll('{' + selector + '}', value);
+            calculate = calculate.replaceAll('{' + selector + '}', value);
         }
     }
 
-    return calculation;
+    return calculate;
 }
 
 function initEvent(element, input) {
@@ -105,9 +105,9 @@ function initEvent(element, input) {
 
 async function setCalcationResult(element) {
     const { object, isRealtime } = getAttributes(element);
-    let calculation = element.getAttribute('calculate');
+    let calculate = element.getAttribute('calculate');
 
-    let calString = await getValues(calculation);
+    let calString = await getValues(calculate);
 
     if (calString) {
         let result = calculate(calString);
@@ -147,7 +147,7 @@ function calculate(string) {
 }
 
 observer.init({
-    name: 'CoCreateCalculationChangeValue',
+    name: 'CoCreateCalculateChangeValue',
     observe: ['attributes'],
     attributeName: ['calculate'],
     callback(mutation) {
@@ -156,7 +156,7 @@ observer.init({
 });
 
 observer.init({
-    name: 'CoCreateCalculationInit',
+    name: 'CoCreateCalculateInit',
     observe: ['addedNodes'],
     target: '[calculate]',
     callback(mutation) {

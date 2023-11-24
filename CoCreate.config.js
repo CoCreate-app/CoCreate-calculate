@@ -8,13 +8,13 @@ module.exports = {
             "object": {
                 "_id": "6019bade4eea0817df303b0a",
                 "name": "index.html",
-                "path": "/docs/calculation",
-                "pathname": "/docs/calculation/index.html",
+                "path": "/docs/calculate",
+                "pathname": "/docs/calculate/index.html",
                 "src": "{{./docs/index.html}}",
                 "host": [
                     "*"
                 ],
-                "directory": "calculation",
+                "directory": "calculate",
                 "content-type": "{{content-type}}",
                 "public": "true"
             }

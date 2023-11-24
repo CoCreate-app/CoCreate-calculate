@@ -10,14 +10,14 @@ module.exports = (env, argv) => {
 
     const config = {
         entry: {
-            "CoCreate-calculation": "./src/index.js",
+            "CoCreate-calculate": "./src/index.js",
         },
         output: {
             path: path.resolve(__dirname, "dist"),
             filename: isProduction ? "[name].min.js" : "[name].js",
             libraryTarget: "umd",
             libraryExport: "default",
-            library: ["CoCreate", "calculation"],
+            library: ["CoCreate", "calculate"],
             globalObject: "this",
         },
 
