@@ -1,3 +1,15 @@
+# [1.13.0](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.12.0...v1.13.0) (2023-11-25)
+
+
+### Bug Fixes
+
+* update nav, edit button and css path ([c2fe314](https://github.com/CoCreate-app/CoCreate-calculations/commit/c2fe31408fc6763a8eaef91ed11d9570a847791c))
+
+
+### Features
+
+* upgrade dependencies for latest features and fixes ([029c9f2](https://github.com/CoCreate-app/CoCreate-calculations/commit/029c9f2b88a797f4c884309f3cdbed6269e0bda3))
+
 # [1.12.0](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.11.0...v1.12.0) (2023-11-22)
 
 
