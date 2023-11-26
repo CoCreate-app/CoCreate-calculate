@@ -1,3 +1,10 @@
+## [1.14.1](https://github.com/CoCreate-app/CoCreate-calculate/compare/v1.14.0...v1.14.1) (2023-11-26)
+
+
+### Bug Fixes
+
+* renamed to caculate ([69a84f7](https://github.com/CoCreate-app/CoCreate-calculate/commit/69a84f7bea5d08a27e781cdd65b1e3252d340555))
+
 # [1.14.0](https://github.com/CoCreate-app/CoCreate-calculations/compare/v1.13.0...v1.14.0) (2023-11-25)
 
 
