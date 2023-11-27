@@ -105,9 +105,8 @@ function initEvent(element, input) {
 
 async function setCalcationResult(element) {
     const { object, isRealtime } = getAttributes(element);
-    let calculate = element.getAttribute('calculate');
 
-    let calString = await getValues(calculate);
+    let calString = await getValues(element.getAttribute('calculate'));
 
     if (calString) {
         let result = calculate(calString);
