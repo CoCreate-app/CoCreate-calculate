@@ -1,3 +1,10 @@
+## [1.14.2](https://github.com/CoCreate-app/CoCreate-calculate/compare/v1.14.1...v1.14.2) (2023-12-09)
+
+
+### Bug Fixes
+
+* typo ([a19301a](https://github.com/CoCreate-app/CoCreate-calculate/commit/a19301ab5d2e66d155f00e7277ef98fc83d8fedc))
+
 ## [1.14.1](https://github.com/CoCreate-app/CoCreate-calculate/compare/v1.14.0...v1.14.1) (2023-11-26)
 
 
