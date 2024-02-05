@@ -1,3 +1,10 @@
+## [1.14.3](https://github.com/CoCreate-app/CoCreate-calculate/compare/v1.14.2...v1.14.3) (2024-02-05)
+
+
+### Bug Fixes
+
+* Removed https://cdn.cocreate.app/latest/CoCreate.min.css ([27fe3fb](https://github.com/CoCreate-app/CoCreate-calculate/commit/27fe3fbc4c3ef0958d9bf7b686114f585b22409f))
+
 ## [1.14.2](https://github.com/CoCreate-app/CoCreate-calculate/compare/v1.14.1...v1.14.2) (2023-12-09)
 
 
