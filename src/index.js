@@ -83,7 +83,7 @@ async function getValues(calculate) {
         }
 
         if (value != null && !Number.isNaN(value)) {
-            calculate = calculate.replaceAll('{' + selector + '}', value);
+            calculate = calculate.replaceAll('{(' + selector + ')}', value);
         }
     }
 

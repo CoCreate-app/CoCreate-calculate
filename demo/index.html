@@ -15,13 +15,13 @@
         <input class="we" key="total" id="id2" value="13" />
         <!--<input id="id3" value="14"><br><br><br>-->
 
-        <input id="te" calculate="{#id1} + {#id2}" />
+        <input id="te" calculate="{(#id1)} + {(#id2)}" />
         <!--<input calculate="1 + 3 * 5">-->
         <input calculate="{[key='total']} + 1" />
-        <h1 calculate="{[key='total']} + {#te}">sum</h1>
+        <h1 calculate="{[key='total']} + {(#te)}">sum</h1>
 
         <!--<h1 calculate="sum[.we]">sum</h1>-->
-        <!--<h1 calculate="1 + {#id1} * 5 + {#id3}/{#id2} + {#id2}"></h1>-->
+        <!--<h1 calculate="1 + {(#id1)} * 5 + {(#id3)}/{(#id2)} + {(#id2)}"></h1>-->
         <!--<h1 calculate="(({#id1} + {#id2})) * {#id3}"></h1>-->
 
         <!--<script src="../dist/CoCreate-calculate.js"></script>-->
