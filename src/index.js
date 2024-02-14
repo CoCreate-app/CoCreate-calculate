@@ -114,7 +114,7 @@ async function setCalcationResult(element) {
         // TODO: input event below triggers save for all input elements but will not save for regular elements
         if (element.setValue) {
             element.setValue(result)
-            if (object && isRealtime != "false") {
+            if (object && isRealtime && isRealtime !== "false") {
                 element.save(element);
             }
         }
