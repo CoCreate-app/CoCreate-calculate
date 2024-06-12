@@ -1,3 +1,11 @@
+## [1.14.7](https://github.com/CoCreate-app/CoCreate-calculate/compare/v1.14.6...v1.14.7) (2024-06-12)
+
+
+### Bug Fixes
+
+* bump cocreate dependencies ([d7b59b6](https://github.com/CoCreate-app/CoCreate-calculate/commit/d7b59b6046e02a1772964634b4425fd2a1ae260f))
+* svg icon class ([08f7126](https://github.com/CoCreate-app/CoCreate-calculate/commit/08f7126c16e9a09ea909eef469ed79dfc29d1380))
+
 ## [1.14.6](https://github.com/CoCreate-app/CoCreate-calculate/compare/v1.14.5...v1.14.6) (2024-04-29)
 
 
