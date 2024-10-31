@@ -33,7 +33,7 @@ function initElement(element) {
         observer.init({
             name: 'calculateSelectorInit',
             observe: ['addedNodes'],
-            target: selectors[i],
+            selector: selectors[i],
             callback(mutation) {
                 initEvent(element, mutation.target);
                 setCalcationResult(element);
@@ -157,7 +157,7 @@ observer.init({
 observer.init({
     name: 'CoCreateCalculateInit',
     observe: ['addedNodes'],
-    target: '[calculate]',
+    selector: '[calculate]',
     callback(mutation) {
         initElement(mutation.target);
     }
