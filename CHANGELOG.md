@@ -1,3 +1,17 @@
+# [1.15.0](https://github.com/CoCreate-app/CoCreate-calculate/compare/v1.14.7...v1.15.0) (2024-11-04)
+
+
+### Bug Fixes
+
+* observer taget has been renamed to selector ([b781427](https://github.com/CoCreate-app/CoCreate-calculate/commit/b7814279f23ab622e624dae0426b6233be6360a8))
+* pretier.config.js and file formating ([c42f51b](https://github.com/CoCreate-app/CoCreate-calculate/commit/c42f51b2b1427b9fe71ef7ae0dfd01154051e51f))
+
+
+### Features
+
+* add prettier.config.js and format files ([c7c6c3e](https://github.com/CoCreate-app/CoCreate-calculate/commit/c7c6c3e2e02d253759f59b0dd5ecaac8df2e8c75))
+* add prettier.config.js and format files ([d20732a](https://github.com/CoCreate-app/CoCreate-calculate/commit/d20732a680def53c99609f31c8f0c5264ca188ab))
+
 ## [1.14.7](https://github.com/CoCreate-app/CoCreate-calculate/compare/v1.14.6...v1.14.7) (2024-06-12)
 
 
