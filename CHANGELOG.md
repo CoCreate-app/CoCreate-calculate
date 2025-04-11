@@ -1,3 +1,17 @@
+# [1.16.0](https://github.com/CoCreate-app/CoCreate-calculate/compare/v1.15.0...v1.16.0) (2025-04-11)
+
+
+### Bug Fixes
+
+* sanitize and  calulate expressionbs ([0710efb](https://github.com/CoCreate-app/CoCreate-calculate/commit/0710efbdd72bdc563e387819e5a7c43a9d5bfb25))
+* update demo ([4d6f6b6](https://github.com/CoCreate-app/CoCreate-calculate/commit/4d6f6b60b68dcdefb1eae64939fde8eea0e45096))
+* update observer observe param to type and and attributeName to attributeFilter ([d50f013](https://github.com/CoCreate-app/CoCreate-calculate/commit/d50f013c0fb3de9e94bad052e11077da042ae223))
+
+
+### Features
+
+* **calculator:** Add mathematical expression evaluator ([89a3e61](https://github.com/CoCreate-app/CoCreate-calculate/commit/89a3e61c87b7cbcdd42a29583ddfbceafe611df8))
+
 # [1.15.0](https://github.com/CoCreate-app/CoCreate-calculate/compare/v1.14.7...v1.15.0) (2024-11-04)
 
 
