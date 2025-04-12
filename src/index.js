@@ -16,7 +16,7 @@ async function initElement(element) {
 	let calculate = element.getAttribute("calculate");
 	if (calculate.includes("{{") || calculate.includes("{[")) return;
 
-	let selectors = getSelectors(calculate);
+	let selectors = getSelectors(element.attributes["calculate"].value);
 
 	for (let i = 0; i < selectors.length; i++) {
 		let inputs = queryElements({
@@ -118,12 +118,11 @@ async function setCalcationValue(element) {
 async function getValues(element) {
 	let calculate = element.getAttribute("calculate");
 
-	let selectors = getSelectors(calculate);
+	let selectors = getSelectors(element.attributes["calculate"].value);
 
 	for (let i = 0; i < selectors.length; i++) {
 		let value = 0; // Default to 0 for missing inputs
 		let inputs = queryElements({
-			// Ensure queryElements can be awaited if needed
 			element,
 			selector: selectors[i],
 			type: "selector"
