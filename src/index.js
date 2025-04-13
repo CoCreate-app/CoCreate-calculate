@@ -1,44 +1,59 @@
-import observer from "@cocreate/observer";
-import { queryElements } from "@cocreate/utils";
-// import { renderValue } from '@cocreate/render';
-import "@cocreate/element-prototype";
+import observer from "@cocreate/observer"; // Module for observing DOM mutations.
+import { queryElements } from "@cocreate/utils"; // Utility for querying DOM elements.
+import "@cocreate/element-prototype"; // Include custom element prototype extensions.
 
+// Initializes the calculation elements within the document.
 function init() {
+	// Select all elements in the document with a "calculate" attribute.
 	let calculateElements = document.querySelectorAll("[calculate]");
+	// Initialize each of the selected elements.
 	initElements(calculateElements);
 }
 
+// Initialize multiple elements by invoking initElement for each.
 function initElements(elements) {
+	// Iterate through the collection of elements and initialize each one.
 	for (let el of elements) initElement(el);
 }
 
+// Asynchronously initializes an individual element with setup for calculations.
 async function initElement(element) {
+	// Fetch the calculate string from the element's attribute.
 	let calculate = element.getAttribute("calculate");
+	// Return early if the calculate string contains placeholders or template syntax.
 	if (calculate.includes("{{") || calculate.includes("{[")) return;
 
+	// Extract selectors from the calculate attribute value.
 	let selectors = getSelectors(element.attributes["calculate"].value);
 
+	// Iterate through each selector and set up elements impacted by them.
 	for (let i = 0; i < selectors.length; i++) {
+		// Find input elements based on the selector criteria.
 		let inputs = queryElements({
 			element,
 			selector: selectors[i],
 			type: "selector"
 		});
 
+		// Set up events for each found input element.
 		for (let input of inputs) {
 			initEvent(element, input);
 		}
 
+		// Initialize an observer to monitor newly added nodes that match the selector.
 		observer.init({
 			name: "calculateSelectorInit",
 			types: ["addedNodes"],
 			selector: selectors[i],
+			// Callback function to run when nodes matching the selector are added.
 			callback(mutation) {
+				// Initialize events for the new element and update calculation.
 				initEvent(element, mutation.target);
 				setCalcationValue(element);
 			}
 		});
 	}
+	// Set initial calculation value when an element is being initialized.
 	setCalcationValue(element);
 }
 
@@ -110,33 +125,47 @@ function initEvent(element, input) {
 	});
 }
 
+// Asynchronously set the calculated value for the given element.
 async function setCalcationValue(element) {
+	// Get the expression or formula from the element's "calculate" attribute.
 	let calString = await getValues(element);
+	// Evaluate the formula and set the calculated value back to the element.
 	element.setValue(calculate(calString));
 }
 
+// Asynchronously retrieve values necessary for computing the calculation attribute of an element.
 async function getValues(element) {
+	// Get the expression that needs to be evaluated from the "calculate" attribute.
 	let calculate = element.getAttribute("calculate");
 
+	// Parse the expression to extract any selectors which values need to contribute to calculation.
 	let selectors = getSelectors(element.attributes["calculate"].value);
 
+	// For each selector, retrieve and calculate the respective value.
 	for (let i = 0; i < selectors.length; i++) {
-		let value = 0; // Default to 0 for missing inputs
+		let value = 0; // Default value in case no input is found for the selector.
+
+		// Query DOM elements based on selector.
 		let inputs = queryElements({
 			element,
 			selector: selectors[i],
 			type: "selector"
 		});
 
+		// Iterate through inputs/elements matched by the selector.
 		for (let input of inputs) {
+			// Initialize event listeners on inputs so that changes can update the calculation.
 			initEvent(element, input);
 			let val = null;
+
+			// Attempt to get the value from the input element, if it can provide it.
 			if (input.getValue) {
 				val = Number(await input.getValue());
 			}
 
+			// Only accumulate valid numeric values.
 			if (!Number.isNaN(val)) {
-				value += val; // Accumulate valid numeric values
+				value += val;
 			} else {
 				console.warn(
 					`Invalid value for selector "${selectors[i]}". Defaulting to 0.`
@@ -144,29 +173,29 @@ async function getValues(element) {
 			}
 		}
 
+		// Replace the placeholder in the calculation expression with the accumulated value.
 		calculate = calculate.replaceAll(`(${selectors[i]})`, value);
 	}
-
-	return calculate;
+	return calculate; // Return the resolved calculation expression.
 }
 
 // Defines mathematical constants available in expressions.
 const constants = { PI: Math.PI, E: Math.E };
 
-// Defines allowed mathematical functions and maps them to their JavaScript Math counterparts.
+// Defines allowed mathematical functions and maps them to their respective JavaScript Math counterparts.
 const functions = {
-	abs: Math.abs,
-	ceil: Math.ceil,
-	floor: Math.floor,
-	round: Math.round,
-	max: Math.max, // Note: RPN evaluator assumes arity 2 for max/min
-	min: Math.min, // Note: RPN evaluator assumes arity 2 for max/min
-	pow: Math.pow,
-	sqrt: Math.sqrt,
+	abs: Math.abs, // Absolute value
+	ceil: Math.ceil, // Ceiling function
+	floor: Math.floor, // Floor function
+	round: Math.round, // Round to nearest integer
+	max: Math.max, // Maximum value (assumes arity 2 in RPN)
+	min: Math.min, // Minimum value (assumes arity 2 in RPN)
+	pow: Math.pow, // Exponentiation
+	sqrt: Math.sqrt, // Square root
 	log: Math.log, // Natural logarithm
-	sin: Math.sin,
-	cos: Math.cos,
-	tan: Math.tan
+	sin: Math.sin, // Sine function
+	cos: Math.cos, // Cosine function
+	tan: Math.tan // Tangent function
 };
 
 /**
