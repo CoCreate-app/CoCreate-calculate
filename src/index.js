@@ -952,24 +952,25 @@ function calculate(expression) {
 	}
 }
 
-observer.init({
-	name: "CoCreateCalculateChangeValue",
-	types: ["attributes"],
-	attributeFilter: ["calculate"],
-	callback(mutation) {
-		setCalcationValue(mutation.target);
+observer.init([
+	{
+		name: "CoCreateCalculateChangeValue",
+		types: ["attributes"],
+		attributeFilter: ["calculate"],
+		callback(mutation) {
+			setCalcationValue(mutation.target);
+		}
+	},
+	{
+		name: "CoCreateCalculateInit",
+		types: ["addedNodes"],
+		selector: "[calculate]",
+		callback(mutation) {
+			initElement(mutation.target);
+		}
 	}
-});
+]);
 
-observer.init({
-	name: "CoCreateCalculateInit",
-	types: ["addedNodes"],
-	selector: "[calculate]",
-	callback(mutation) {
-		initElement(mutation.target);
-	}
-});
-
-init();
+init(); //
 
 export default { initElements, initElement, calculate };
