@@ -1,3 +1,16 @@
+## [1.16.1](https://github.com/CoCreate-app/CoCreate-calculate/compare/v1.16.0...v1.16.1) (2025-04-30)
+
+
+### Bug Fixes
+
+* added comments ([7ef054f](https://github.com/CoCreate-app/CoCreate-calculate/commit/7ef054f95558036f5d62b00676bf99a58fb425c4))
+* added css-loader ([4649096](https://github.com/CoCreate-app/CoCreate-calculate/commit/46490965d3738e685afd41c44bc78e1e34fe1968))
+* getAttribute ([2a79157](https://github.com/CoCreate-app/CoCreate-calculate/commit/2a7915740101e34923c499c9ebaac29e6b91c9fa))
+* unified observer array of object ([8a525fa](https://github.com/CoCreate-app/CoCreate-calculate/commit/8a525fa0e0ab7a02b77783b2f0fae6a04851ef70))
+* update query attributes ([38a77ff](https://github.com/CoCreate-app/CoCreate-calculate/commit/38a77ffb054b479f5ac926152e32980337ddbfe8))
+* updated cocreate modules versions ([bf2795b](https://github.com/CoCreate-app/CoCreate-calculate/commit/bf2795b72ea5e7c7cbded8da66caa06e615353ee))
+* webpack.config and devdependencies ([5f97fca](https://github.com/CoCreate-app/CoCreate-calculate/commit/5f97fcad7165a5332a0371b469f687d1fd7caa07))
+
 # [1.16.0](https://github.com/CoCreate-app/CoCreate-calculate/compare/v1.15.0...v1.16.0) (2025-04-11)
 
 
