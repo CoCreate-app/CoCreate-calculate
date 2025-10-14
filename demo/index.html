@@ -15,9 +15,9 @@
 		<input class="class1" key="total" id="id1" value="12" />
 		<input class="class1" key="total" id="id2" value="13" />
 
-		<input id="te" calculate="($selctor #id1) + ($selctor #id2)" />
-		<input calculate="($selctor [key='total']) + 1" />
-		<h1 calculate="($selctor [key='total']) + ($selctor .class1)">sum</h1>
+		<input id="te" calculate="($document #id1) + ($document #id2)" />
+		<input calculate="($document [key='total']) + 1" />
+		<h1 calculate="($document [key='total']) + ($document .class1)">sum</h1>
 
 		<!--<script src="../dist/CoCreate-calculate.js"></script>-->
 		<script src="https://dev.CoCreate.app/dist/CoCreate.js"></script>
