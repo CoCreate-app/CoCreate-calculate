@@ -1,3 +1,10 @@
+## [1.16.3](https://github.com/CoCreate-app/CoCreate-calculate/compare/v1.16.2...v1.16.3) (2025-11-16)
+
+
+### Bug Fixes
+
+* correct selector references in calculations ([9cfe46b](https://github.com/CoCreate-app/CoCreate-calculate/commit/9cfe46b88013c0f7e217829cdfa9ad7e11b41ebf))
+
 ## [1.16.2](https://github.com/CoCreate-app/CoCreate-calculate/compare/v1.16.1...v1.16.2) (2025-05-01)
 
 
