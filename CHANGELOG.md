@@ -1,3 +1,10 @@
+## [1.16.4](https://github.com/CoCreate-app/CoCreate-calculate/compare/v1.16.3...v1.16.4) (2026-01-18)
+
+
+### Bug Fixes
+
+* update worklow ([6ed7b1d](https://github.com/CoCreate-app/CoCreate-calculate/commit/6ed7b1d1fb03c21b64919ae0dfd44337dc7c110c))
+
 ## [1.16.3](https://github.com/CoCreate-app/CoCreate-calculate/compare/v1.16.2...v1.16.3) (2025-11-16)
 
 
