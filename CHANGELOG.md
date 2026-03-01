@@ -1,3 +1,10 @@
+# [1.17.0](https://github.com/CoCreate-app/CoCreate-calculate/compare/v1.16.5...v1.17.0) (2026-03-01)
+
+
+### Features
+
+* Enhance element initialization and calculation logic ([ce7a6a0](https://github.com/CoCreate-app/CoCreate-calculate/commit/ce7a6a0cf42a63ee092fba38626179cbf573d5cb))
+
 ## [1.16.5](https://github.com/CoCreate-app/CoCreate-calculate/compare/v1.16.4...v1.16.5) (2026-02-09)
 
 
