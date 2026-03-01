@@ -1,25 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>Calculate | CoCreateJS</title>
-		<!-- CoCreate Favicon -->
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="32x32"
-			href="../assets/favicon.ico" />
-		<link rel="manifest" href="/manifest.webmanifest" />
-	</head>
-	<body>
-		<input value="12" calculate="$value * 100" />
-		<input class="class1" key="total" id="id1" value="12" />
-		<input class="class1" key="total" id="id2" value="13" />
+    <head>
+        <title>Calculate | CoCreateJS</title>
+        <!-- CoCreate Favicon -->
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="../assets/favicon.ico" />
+            
+        <script>
+            // Prevent ServiceWorker InvalidStateError in sandboxed preview environments
+            // by safely hiding the serviceWorker API from feature detection before external scripts load.
+            try {
+                Object.defineProperty(navigator, 'serviceWorker', {
+                    value: undefined,
+                    configurable: true
+                });
+            } catch (e) {}
+        </script>
 
-		<input id="te" calculate="($document #id1) + ($document #id2)" />
-		<input calculate="($document [key='total']) + 1" />
-		<h1 calculate="($document [key='total']) + ($document .class1)">sum</h1>
+        <style>
+            body { font-family: sans-serif; padding: 20px; max-width: 800px; margin: auto; }
+            .section { background: #f9f9f9; padding: 15px; margin-bottom: 20px; border-radius: 8px; border: 1px solid #ddd; }
+            input { margin-bottom: 10px; padding: 5px; }
+            label { display: inline-block; width: 150px; font-weight: bold; }
+        </style>
+    </head>
+    <body>
+        <h1>Safe Parser Calculate Examples</h1>
 
-		<!--<script src="../dist/CoCreate-calculate.js"></script>-->
-		<script src="https://CoCreate.app/dist/CoCreate.js"></script>
-	</body>
+        <div class="section">
+            <h3>Original DOM Selectors</h3>
+            <label>Self Value:</label>
+            <input value="12" calculate="$value * 100" /><br>
+
+            <label>Input 1 (id1):</label>
+            <input class="class1" key="total" id="id1" value="12" /><br>
+
+            <label>Input 2 (id2):</label>
+            <input class="class1" key="total" id="id2" value="13" /><br>
+
+            <label>Sum id1 + id2:</label>
+            <input id="te" calculate="($document #id1) + ($document #id2)" /><br>
+
+            <label>Key Total + 1:</label>
+            <input calculate="($document [key='total']) + 1" />
+
+            <h3 calculate="($document [key='total']) + ($document .class1)">sum</h3>
+        </div>
+
+        <div class="section">
+            <h3>Math Functions & Constants</h3>
+            <label>Base Number:</label>
+            <input id="baseNum" value="25" /><br>
+
+            <!-- Using Math.sqrt() -->
+            <label>Square Root:</label>
+            <input calculate="sqrt(($document #baseNum))" /><br>
+
+            <!-- Using Math.pow() -->
+            <label>Power (base^2):</label>
+            <input calculate="pow(($document #baseNum), 2)" /><br>
+
+            <!-- Using Math.max() with selectors -->
+            <label>Max Value:</label>
+            <input calculate="max(($document #id1), ($document #id2), 20)" /><br>
+
+            <!-- Using Constants -->
+            <label>Num * PI:</label>
+            <input calculate="round(($document #baseNum) * PI)" /><br>
+        </div>
+
+        <div class="section">
+            <h3>Ternary Conditionals (? :)</h3>
+            <label>User Age:</label>
+            <input id="age" value="20" /><br>
+
+            <!-- Basic Ternary String Output -->
+            <label>Status:</label>
+            <input calculate="($document #age) >= 18 ? 'Adult' : 'Minor'" readonly style="background: #eee;" /><br>
+
+            <!-- Nested Ternary for Tiers -->
+            <label>Score:</label>
+            <input id="score" value="85" /><br>
+
+            <label>Grade:</label>
+            <input calculate="($document #score) >= 90 ? 'A' : ($document #score) >= 80 ? 'B' : 'C'" readonly style="background: #eee;" /><br>
+
+            <!-- Math inside Ternary condition -->
+            <label>Combined Goal:</label>
+            <input calculate="(($document #id1) + ($document #id2)) > 20 ? 'Goal Reached!' : 'Keep Going...'" readonly style="background: #eee; width: 200px;" />
+        </div>
+
+        <!--<script src="../dist/CoCreate-calculate.js"></script>-->
+        <script src="https://geneomes.com/dist/CoCreate.js"></script>
+    </body>
 </html>
